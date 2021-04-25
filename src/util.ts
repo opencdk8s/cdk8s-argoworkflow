@@ -64,7 +64,7 @@ export function inputGenerator(
   artifactPath?: string,
   secret?: sshKey
 ) {
-  const input: Input = {
+  const input = {
     parameters: inputParams,
     artifacts: artifactGenerator(
       artifactPath,
