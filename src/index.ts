@@ -1,9 +1,10 @@
 import * as cdk8s from 'cdk8s';
+import { ApiObject, GroupVersionKind } from 'cdk8s';
 import { Construct } from 'constructs';
 import * as k8s from './imports/k8s';
 import { InputParams, initContainer, sshKey, inputGenerator } from './util';
 
-export interface WorkflowOpts {
+export interface WorkflowProps {
   readonly name?: string;
   readonly namespace?: string;
   readonly image?: string;
@@ -18,43 +19,51 @@ export interface WorkflowOpts {
   readonly artifactPath?: string;
 }
 
-export class ArgoWorkflow extends Construct {
-  public readonly name?: string;
-  public readonly namespace?: string;
-
-  constructor(scope: Construct, name: string, opts: WorkflowOpts) {
-    super(scope, name);
-
-    this.name = opts.name ?? 'unnamed-workflow';
-    this.namespace = opts.namespace ?? 'argo';
-
-    new cdk8s.ApiObject(this, 'argo-workflow', {
+export class ArgoWorkflow extends ApiObject {
+  public static readonly GVK: GroupVersionKind = {
+    apiVersion: 'argoproj.io/v1alpha1',
+    kind: 'ClusterWorkflowTemplate'
+  }
+  
+  public static propHandler(props: WorkflowProps): any {
+    return {
       apiVersion: 'argoproj.io/v1alpha1',
       kind: 'ClusterWorkflowTemplate',
       metadata: {
-        name: this.name,
-        namespace: this.namespace
+        name: props.name,
+        namespace: props.namespace
       },
       spec: {
         templates: {
-          name: this.name,
-          inputs: inputGenerator(opts.inputParams, opts.artifactPath, opts.gitSshPrivateKeySecret),
+          name: props.name,
+          inputs: inputGenerator(props.inputParams, props.artifactPath, props.gitSshPrivateKeySecret),
         },
         container: {
-          image: opts.image,
-          command: opts.containerVals.command,
-          env: opts.containerVals.env,
+          image: props.image,
+          command: props.containerVals.command,
+          env: props.containerVals.env,
         },
         initContainers: {
-          name: opts.initContainers.name,
-          image: opts.initContainers.image || opts.image,
-          env: opts.initContainers.env || opts.containerVals.env,
-          command: opts.initContainers.command,
-          args: opts.initContainers.args
+          name: props.initContainers.name,
+          image: props.initContainers.image || props.image,
+          env: props.initContainers.env || props.containerVals.env,
+          command: props.initContainers.command,
+          args: props.initContainers.args
         },
-        volumes: opts.volumes,
-        securityContext: opts.securityContext
+        volumes: props.volumes,
+        securityContext: props.securityContext
       }
-    })
+    }
+  }
+
+  public static manifest(props: WorkflowProps): any {
+    return {
+      ...ArgoWorkflow.GVK,
+      ...this.propHandler(props)
+    }
+  }
+
+  constructor(scope: Construct, name: string, props: WorkflowProps) {
+    super(scope, name, ArgoWorkflow.manifest(props));
   }
 }
