@@ -2,7 +2,7 @@ import * as cdk8s from 'cdk8s';
 import { ApiObject, GroupVersionKind } from 'cdk8s';
 import { Construct } from 'constructs';
 import * as k8s from './imports/k8s';
-import { InputParams, initContainer, sshKey, inputGenerator } from './util';
+import { InputParams, initContainer, sshKey } from './util';
 
 export interface WorkflowProps {
   readonly name?: string;
@@ -25,39 +25,10 @@ export class ArgoWorkflow extends ApiObject {
     kind: 'ClusterWorkflowTemplate'
   }
   
-  public static propHandler(props: WorkflowProps): any {
-    return {
-      metadata: {
-        name: props.name,
-        namespace: props.namespace
-      },
-      spec: {
-        templates: {
-          name: props.name,
-          inputs: inputGenerator(props.inputParams, props.artifactPath, props.gitSshPrivateKeySecret),
-        },
-        container: {
-          image: props.image,
-          command: props.containerVals.command,
-          env: props.containerVals.env,
-        },
-        initContainers: {
-          name: props.initContainers.name,
-          image: props.initContainers.image || props.image,
-          env: props.initContainers.env || props.containerVals.env,
-          command: props.initContainers.command,
-          args: props.initContainers.args
-        },
-        volumes: props.volumes,
-        securityContext: props.securityContext
-      }
-    }
-  }
-
   public static manifest(props: WorkflowProps): any {
     return {
       ...ArgoWorkflow.GVK,
-      ...this.propHandler(props)
+      ...props
     }
   }
 

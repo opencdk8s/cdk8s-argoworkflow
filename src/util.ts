@@ -7,6 +7,7 @@ export interface InputParams {
   readonly pr_number?: string;
   readonly repo_commit_id?: string;
   readonly root_ecr?: string,
+  readonly artifacts?: Artifact[],
 }
 
 export interface sshKey {
@@ -14,7 +15,13 @@ export interface sshKey {
   readonly key: string;
 }
 
-export interface Git {
+export interface Artifact {
+  readonly name: string,
+  readonly path: string,
+  readonly git?: GitArtifact
+}
+
+export interface GitArtifact {
   readonly repo: string;
   readonly revision?:string;
   readonly sshPrivateKeySecret?: sshKey;
@@ -27,50 +34,4 @@ export interface initContainer {
   readonly env?: k8s.EnvVar;
   readonly command?: string[];
   readonly args?: string[];
-}
-
-export interface Artifact {
-  name: string,
-  path: string,
-  git?: Git
-}
-
-export function artifactGenerator(
-  path: string, 
-  type: string,
-  secret?: sshKey
-) {
-  switch(type) {
-    case 'git':
-      const artifact: Artifact = {
-        name: 'repo-source',
-        path: path,
-        git: {
-          repo: "{{inputs.parameters.repo_url}}",
-          revision: "{{inputs.parameters.repo_ref}}",
-          sshPrivateKeySecret: {
-            name: secret.name,
-            key: secret.key
-          },
-          insecureIgnoreHostKey: false
-        }
-      }
-      return artifact;
-  }
-}
-
-export function inputGenerator(
-  inputParams: InputParams,
-  artifactPath?: string,
-  secret?: sshKey
-) {
-  const input = {
-    parameters: inputParams,
-    artifacts: artifactGenerator(
-      artifactPath,
-      'git',
-      secret
-    )
-  };
-  return input;
 }
