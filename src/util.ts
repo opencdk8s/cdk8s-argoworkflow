@@ -15,17 +15,17 @@ export interface sshKey {
   readonly key: string;
 }
 
-export interface Artifact {
-  readonly name: string,
-  readonly path: string,
-  readonly git?: GitArtifact
-}
-
 export interface GitArtifact {
   readonly repo: string;
   readonly revision?:string;
   readonly sshPrivateKeySecret?: sshKey;
   readonly insecureIgnoreHostKey?: boolean;
+}
+
+export interface Artifact {
+  readonly name: string,
+  readonly path: string,
+  readonly git?: GitArtifact
 }
 
 export interface initContainer {
