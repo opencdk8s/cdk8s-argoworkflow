@@ -4963,7 +4963,7 @@ export interface WorkflowTemplateSpec {
     /**
      * PodDisruptionBudget holds the number of concurrent disruptions that you allow for Workflow's Pods. Controller will automatically add the selector with workflow name, if selector is empty. Optional: Defaults to empty.
      */
-    podDisruptionBudget?: l8s.PodDisruptionBudgetSpec;
+    podDisruptionBudget?: k8s.PodDisruptionBudgetSpec;
     /**
      * PodGC describes the strategy to use when to deleting completed pods
      */

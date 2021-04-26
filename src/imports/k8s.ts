@@ -17766,3 +17766,10 @@ export interface GroupVersionResource {
   readonly version: string;
   readonly resource: string;
 }
+
+export interface CreateOptions {
+  readonly Kind: string;
+  readonly APIVersion: string;
+  readonly DryRun: string[];
+  readonly FieldManager: string;
+}
