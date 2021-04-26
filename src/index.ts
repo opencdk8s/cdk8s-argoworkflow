@@ -3,7 +3,7 @@ import { ApiObject, GroupVersionKind } from 'cdk8s';
 import { Construct } from 'constructs';
 import * as k8s from './imports/k8s';
 import * as swagger from './output';
-import { InputParams, initContainer, sshKey } from './util';
+import { sshKey } from './util';
 
 export interface WorkflowProps {
   readonly name?: string;
