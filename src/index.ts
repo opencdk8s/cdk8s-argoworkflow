@@ -27,8 +27,6 @@ export class ArgoWorkflow extends ApiObject {
   
   public static propHandler(props: WorkflowProps): any {
     return {
-      apiVersion: 'argoproj.io/v1alpha1',
-      kind: 'ClusterWorkflowTemplate',
       metadata: {
         name: props.name,
         namespace: props.namespace
