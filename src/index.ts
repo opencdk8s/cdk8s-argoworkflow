@@ -2,6 +2,7 @@ import * as cdk8s from 'cdk8s';
 import { ApiObject, GroupVersionKind } from 'cdk8s';
 import { Construct } from 'constructs';
 import * as k8s from './imports/k8s';
+import * as swagger from './output';
 import { InputParams, initContainer, sshKey } from './util';
 
 export interface WorkflowProps {
@@ -10,11 +11,10 @@ export interface WorkflowProps {
   readonly image?: string;
   readonly volumes?: k8s.Volume;
   readonly templateName?: string;
-  readonly inputParams?: InputParams;
-  // readonly gitVals?: Git;
+  readonly inputParams?: swagger.Inputs;
   readonly containerVals?: k8s.Container;
   readonly securityContext?: k8s.SecurityContext;
-  readonly initContainers?: initContainer;
+  readonly initContainers?: k8s.Container;
   readonly gitSshPrivateKeySecret?: sshKey;
   readonly artifactPath?: string;
 }
