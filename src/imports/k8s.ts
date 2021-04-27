@@ -17773,3 +17773,9 @@ export interface CreateOptions {
   readonly DryRun: string[];
   readonly FieldManager: string;
 }
+
+
+export interface sshKey {
+  readonly name: string;
+  readonly key: string;
+}
