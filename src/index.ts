@@ -1,10 +1,6 @@
 import { ApiObject, GroupVersionKind } from 'cdk8s';
 import { Construct } from 'constructs';
 import * as k8s from './imports/k8s';
-import * as swagger from './imports/swagger';
-
-import * as k8s from './k8s';
-
 
 export type Item = any;
 
