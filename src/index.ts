@@ -1049,7 +1049,7 @@ export class ArgoWorkflow extends ApiObject {
     }
   }
 
-  constructor(scope: Construct, name: string, props: WorkflowProps) {
+  constructor(scope: Construct, name: string, props: ClusterWorkflowTemplate) {
     super(scope, name, ArgoWorkflow.manifest(props));
   }
 }
