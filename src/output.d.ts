@@ -26,7 +26,7 @@ export interface EventsourceLogEntry {
     level?: string;
     msg?: string;
     namespace?: string;
-    time?: k8s.Time; // date-time
+    time?: Date; // date-time
 }
 export interface EventsourceUpdateEventSourceRequest {
     eventSource?: IoArgoprojEventsV1alpha1EventSource;
@@ -299,7 +299,7 @@ export interface IoArgoprojEventsV1alpha1Condition {
      * Last time the condition transitioned from one status to another.
      * +optional
      */
-    lastTransitionTime?: k8s.Time; // date-time
+    lastTransitionTime?: Date; // date-time
     /**
      * Human-readable message indicating details about last transition.
      * +optional
@@ -490,7 +490,7 @@ export interface IoArgoprojEventsV1alpha1EventContext {
     /**
      * Time - A Timestamp when the event happened.
      */
-    time?: k8s.Time; // date-time
+    time?: Date; // date-time
     /**
      * Type - The type of the occurrence which has happened.
      */
@@ -1635,7 +1635,7 @@ export interface IoArgoprojEventsV1alpha1ResourceFilter {
      * If resource is created before the specified time then the event is treated as valid.
      * +optional
      */
-    createdBy?: k8s.Time; // date-time
+    createdBy?: Date; // date-time
     /**
      * Fields provide field filters similar to K8s field selector
      * (see https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors/).
@@ -3025,7 +3025,7 @@ export interface CronWorkflowStatus {
     /**
      * LastScheduleTime is the last time the CronWorkflow was scheduled
      */
-    lastScheduledTime: k8s.Time; // date-time
+    lastScheduledTime: Date; // date-time
 }
 export interface CronWorkflowSuspendRequest {
     name?: string;
@@ -3473,7 +3473,7 @@ export interface NodeStatus {
     /**
      * Time at which this node completed
      */
-    finishedAt?: k8s.Time; // date-time
+    finishedAt?: Date; // date-time
     /**
      * HostNodeName name of the Kubernetes node on which the Pod is running, if applicable
      */
@@ -3529,7 +3529,7 @@ export interface NodeStatus {
     /**
      * Time at which this node started
      */
-    startedAt?: k8s.Time; // date-time
+    startedAt?: Date; // date-time
     /**
      * SynchronizationStatus is the synchronization status of the node
      */
@@ -4721,7 +4721,7 @@ export interface WorkflowStatus {
     /**
      * Time at which this workflow completed
      */
-    finishedAt?: k8s.Time; // date-time
+    finishedAt?: Date; // date-time
     /**
      * A human readable message indicating details about why the workflow is in this condition.
      */
@@ -4761,7 +4761,7 @@ export interface WorkflowStatus {
     /**
      * Time at which this workflow started
      */
-    startedAt?: k8s.Time; // date-time
+    startedAt?: Date; // date-time
     /**
      * StoredTemplates is a mapping between a template ref and the node's status.
      */
