@@ -26,7 +26,7 @@ export interface EventsourceLogEntry {
     level?: string;
     msg?: string;
     namespace?: string;
-    time?: Date; // date-time
+    time?: Date; // date-time REF FOR CHANGE: https://github.com/kubernetes/apimachinery/blob/v0.21.0/pkg/apis/meta/v1/time.go#L31
 }
 export interface EventsourceUpdateEventSourceRequest {
     eventSource?: IoArgoprojEventsV1alpha1EventSource;
@@ -299,7 +299,7 @@ export interface IoArgoprojEventsV1alpha1Condition {
      * Last time the condition transitioned from one status to another.
      * +optional
      */
-    lastTransitionTime?: Date; // date-time
+    lastTransitionTime?: Date; // date-time 
     /**
      * Human-readable message indicating details about last transition.
      * +optional
