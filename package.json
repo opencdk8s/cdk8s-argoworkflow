@@ -2,7 +2,7 @@
   "name": "cdk8s-argoworkflow",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaganpreet.singh/cdk8s-argoworkflow.git"
+    "url": "https://github.com/opencdk8s/cdk8s-argoworkflow.git"
   },
   "scripts": {
     "bump": "npx projen bump",
