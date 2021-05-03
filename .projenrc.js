@@ -3,11 +3,31 @@ const { ConstructLibraryCdk8s } = require('projen');
 const project = new ConstructLibraryCdk8s({
   author: 'Gagan Singh',
   authorAddress: 'gaganpreet.singh@smallcase.com',
-  cdk8sVersion: '1.0.0-beta.10',
+  cdk8sVersion: '1.0.0-beta.11',
   defaultReleaseBranch: 'main',
-  jsiiFqn: "projen.ConstructLibraryCdk8s",
+  jsiiFqn: 'projen.ConstructLibraryCdk8s',
   name: 'cdk8s-argoworkflow',
   repositoryUrl: 'https://github.com/gaganpreet.singh/cdk8s-argoworkflow.git',
+
+  python: {
+    distName: 'cdk8s-argoworkflow-resources',
+    module: 'cdk8s_argoworkflow_resources',
+  },
+  peerDeps: [
+    'constructs@^3.3.71',
+  ],
+  devDeps: [
+    'constructs@^3.3.71',
+  ],
+  releaseEveryCommit: false,
+  dependabot: false,
+  gitignore: ['package.json', 'test/'],
+  pullRequestTemplate: false,
+  releaseBranches: ['development'],
+  codeCov: true,
+  clobber: false,
+  readme: true,
+  mergify: true,
 
   /* ConstructLibraryOptions */
   // catalog: undefined,                                                        /* Libraries will be picked up by the construct catalog when they are published to npm as jsii modules and will be published under:. */

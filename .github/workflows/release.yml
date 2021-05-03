@@ -2,16 +2,12 @@
 
 name: Release
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch: {}
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
     env:
       CI: "true"
-      RELEASE: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -19,41 +15,42 @@ jobs:
           fetch-depth: 0
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
+      - name: Synthesize project files
+        run: npx projen
       - name: Anti-tamper check
-        run: git diff --ignore-space-at-eol --exit-code
+        run: git diff --exit-code
       - name: Set git identity
         run: |-
-          git config user.name "Automation"
+          git config user.name "Auto-bump"
           git config user.email "github-actions@github.com"
       - name: Bump to next version
         run: npx projen bump
       - name: Build
         run: npx projen build
-      - name: Check for new commits
-        id: git_remote
-        run: echo ::set-output name=latest_commit::"$(git ls-remote origin -h ${{
-          github.ref }} | cut -f1)"
-      - name: Create release
-        if: ${{ steps.git_remote.outputs.latest_commit == github.sha }}
-        run: gh release create v$(node -p "require('./package.json').version") -F
-          .changelog.tmp.md -t v$(node -p "require('./package.json').version")
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          directory: coverage
+      - name: Anti-tamper check
+        run: git diff --exit-code
+      - name: Push commits
+        run: git push origin $BRANCH
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Unbump
-        run: npx projen unbump
+          BRANCH: ${{ github.ref }}
+      - name: Push tags
+        run: git push --follow-tags origin $BRANCH
+        env:
+          BRANCH: ${{ github.ref }}
       - name: Upload artifact
-        if: ${{ steps.git_remote.outputs.latest_commit == github.sha }}
         uses: actions/upload-artifact@v2.1.1
         with:
           name: dist
           path: dist
-      - name: Anti-tamper check
-        run: git diff --ignore-space-at-eol --exit-code
     container:
       image: jsii/superchain
   release_npm:
     name: Release to NPM
-    needs: release
+    needs: build
     runs-on: ubuntu-latest
     container:
       image: jsii/superchain
@@ -69,3 +66,20 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_DIST_TAG: latest
           NPM_REGISTRY: registry.npmjs.org
+  release_pypi:
+    name: Release to PyPi
+    needs: build
+    runs-on: ubuntu-latest
+    container:
+      image: jsii/superchain
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+      - name: Release
+        run: npx -p jsii-release@latest jsii-release-pypi
+        env:
+          TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
