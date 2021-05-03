@@ -8,1029 +8,1020 @@ export type Amount = number;
 
 export interface GoogleProtobufAny {
   readonly type_url?: string;
-  readonly value?: string; // byte
+  readonly  value?: string; // byte
 }
 
 export interface GrpcGatewayRuntimeError {
-  code?: number;
-  details?: GoogleProtobufAny[];
-  error?: string;
-  message?: string;
+  readonly code?: number;
+  readonly details?: GoogleProtobufAny[];
+  readonly error?: string;
+  readonly message?: string;
 }
 
 export interface GrpcGatewayRuntimeStreamError {
-  details?: GoogleProtobufAny[];
-  grpc_code?: number;
-  http_code?: number;
-  http_status?: string;
-  message?: string;
+  readonly details?: GoogleProtobufAny[];
+  readonly grpc_code?: number;
+  readonly http_code?: number;
+  readonly http_status?: string;
+  readonly message?: string;
 }
 
 export interface ArchiveStrategy {
-  none?: NoneStrategy;
-  tar?: TarStrategy;
-  zip?: ZipStrategy;
+  readonly none?: NoneStrategy;
+  readonly tar?: TarStrategy;
+  readonly zip?: ZipStrategy;
 }
 
 export interface ArchivedWorkflowDeletedResponse {
 }
 
 export interface Arguments {
-  artifacts?: Artifact[];
-  parameters?: Parameter[];
+  readonly artifacts?: Artifact[];
+  readonly parameters?: Parameter[];
 }
 
 export interface Artifact {
-  archive?: ArchiveStrategy;
-  archiveLogs?: boolean;
-  artifactory?: ArtifactoryArtifact;
-  from?: string;
-  fromExpression?: string;
-  gcs?: GCSArtifact;
-  git?: GitArtifact;
-  globalName?: string;
-  hdfs?: HDFSArtifact;
-  http?: HTTPArtifact;
-  mode?: number;
-  name: string;
-  optional?: boolean;
-  oss?: OSSArtifact;
-  path?: string;
-  raw?: RawArtifact;
-  recurseMode?: boolean;
-  s3?: S3Artifact;
-  subPath?: string;
+  readonly archive?: ArchiveStrategy;
+  readonly archiveLogs?: boolean;
+  readonly artifactory?: ArtifactoryArtifact;
+  readonly from?: string;
+  readonly fromExpression?: string;
+  readonly gcs?: GCSArtifact;
+  readonly git?: GitArtifact;
+  readonly globalName?: string;
+  readonly hdfs?: HDFSArtifact;
+  readonly http?: HTTPArtifact;
+  readonly mode?: number;
+  readonly name: string;
+  readonly optional?: boolean;
+  readonly oss?: OSSArtifact;
+  readonly path?: string;
+  readonly raw?: RawArtifact;
+  readonly recurseMode?: boolean;
+  readonly s3?: S3Artifact;
+  readonly subPath?: string;
 }
 
 export interface ArtifactLocation {
-  archiveLogs?: boolean;
-  artifactory?: ArtifactoryArtifact;
-  gcs?: GCSArtifact;
-  git?: GitArtifact;
-  hdfs?: HDFSArtifact;
-  http?: HTTPArtifact;
-  oss?: OSSArtifact;
-  raw?: RawArtifact;
-  s3?: S3Artifact;
+  readonly archiveLogs?: boolean;
+  readonly artifactory?: ArtifactoryArtifact;
+  readonly gcs?: GCSArtifact;
+  readonly git?: GitArtifact;
+  readonly hdfs?: HDFSArtifact;
+  readonly http?: HTTPArtifact;
+  readonly oss?: OSSArtifact;
+  readonly raw?: RawArtifact;
+  readonly s3?: S3Artifact;
 }
 
 export interface ArtifactPaths {
-  archive?: ArchiveStrategy;
-  archiveLogs?: boolean;
-  artifactory?: ArtifactoryArtifact;
-  from?: string;
-  fromExpression?: string;
-  gcs?: GCSArtifact;
-  git?: GitArtifact;
-  globalName?: string;
-  hdfs?: HDFSArtifact;
-  http?: HTTPArtifact;
-  mode?: number;
-  name: string;
-  optional?: boolean;
-  oss?: OSSArtifact;
-  path?: string;
-  raw?: RawArtifact;
-  recurseMode?: boolean;
-  s3?: S3Artifact;
-  subPath?: string;
+  readonly archive?: ArchiveStrategy;
+  readonly archiveLogs?: boolean;
+  readonly artifactory?: ArtifactoryArtifact;
+  readonly from?: string;
+  readonly fromExpression?: string;
+  readonly gcs?: GCSArtifact;
+  readonly git?: GitArtifact;
+  readonly globalName?: string;
+  readonly hdfs?: HDFSArtifact;
+  readonly http?: HTTPArtifact;
+  readonly mode?: number;
+  readonly name: string;
+  readonly optional?: boolean;
+  readonly oss?: OSSArtifact;
+  readonly path?: string;
+  readonly raw?: RawArtifact;
+  readonly recurseMode?: boolean;
+  readonly s3?: S3Artifact;
+  readonly subPath?: string;
 }
 
 export interface ArtifactRepositoryRef {
-  configMap?: string;
-  key?: string;
+  readonly configMap?: string;
+  readonly key?: string;
 }
 
 export interface ArtifactRepositoryRefStatus {
-  configMap?: string;
-  default?: boolean;
-  key?: string;
-  namespace?: string;
+  readonly configMap?: string;
+  readonly default?: boolean;
+  readonly key?: string;
+  readonly namespace?: string;
 }
 
 export interface ArtifactoryArtifact {
-  passwordSecret?: k8s.SecretKeySelector;
-  url: string;
-  usernameSecret?: k8s.SecretKeySelector;
+  readonly passwordSecret?: k8s.SecretKeySelector;
+  readonly url: string;
+  readonly usernameSecret?: k8s.SecretKeySelector;
 }
 
 export interface Backoff {
-  duration?: string;
-  factor?: k8s.IntOrString;
-  maxDuration?: string;
+  readonly duration?: string;
+  readonly factor?: k8s.IntOrString;
+  readonly maxDuration?: string;
 }
 
 export interface Cache {
-  configMap: k8s.ConfigMapKeySelector;
+  readonly configMap: k8s.ConfigMapKeySelector;
 }
 
 export interface ClusterWorkflowTemplate {
-  apiVersion?: string;
-  kind?: string;
-  metadata: k8s.ObjectMeta;
-  spec: WorkflowTemplateSpec;
+  readonly apiVersion?: string;
+  readonly kind?: string;
+  readonly metadata: k8s.ObjectMeta;
+  readonly spec: WorkflowTemplateSpec;
 }
 
 export interface ClusterWorkflowTemplateCreateRequest {
-  createOptions?: k8s.CreateOptions;
-  template?: ClusterWorkflowTemplate;
+  readonly createOptions?: k8s.CreateOptions;
+  readonly template?: ClusterWorkflowTemplate;
 }
 
 export interface ClusterWorkflowTemplateDeleteResponse {
 }
 
 export interface ClusterWorkflowTemplateLintRequest {
-  createOptions?: k8s.CreateOptions;
-  template?: ClusterWorkflowTemplate;
+  readonly createOptions?: k8s.CreateOptions;
+  readonly template?: ClusterWorkflowTemplate;
 }
 
 export interface ClusterWorkflowTemplateList {
-  apiVersion?: string;
-  items: ClusterWorkflowTemplate[];
-  kind?: string;
-  metadata: k8s.ListMeta;
+  readonly apiVersion?: string;
+  readonly items: ClusterWorkflowTemplate[];
+  readonly kind?: string;
+  readonly metadata: k8s.ListMeta;
 }
 
 export interface ClusterWorkflowTemplateUpdateRequest {
-  name?: string;
-  template?: ClusterWorkflowTemplate;
+  readonly name?: string;
+  readonly template?: ClusterWorkflowTemplate;
 }
 
 export interface Condition {
-  message?: string;
-  status?: string;
-  type?: string;
+  readonly message?: string;
+  readonly status?: string;
+  readonly type?: string;
 }
 
 export interface ContainerNode {
-  args?: string[];
-  command?: string[];
-  dependencies?: string[];
-  env?: k8s.EnvVar[];
-  envFrom?: k8s.EnvFromSource[];
-  image?: string;
-  imagePullPolicy?: string;
-  lifecycle?: k8s.Lifecycle;
-  livenessProbe?: k8s.Probe;
-  name: string;
-  ports?: k8s.ContainerPort[];
-  readinessProbe?: k8s.Probe;
-  resources?: k8s.ResourceRequirements;
-  securityContext?: k8s.SecurityContext;
-  startupProbe?: k8s.Probe;
-  stdin?: boolean;
-  stdinOnce?: boolean;
-  terminationMessagePath?: string;
-  terminationMessagePolicy?: string;
-  tty?: boolean;
-  volumeDevices?: k8s.VolumeDevice[];
-  volumeMounts?: k8s.VolumeMount[];
-  workingDir?: string;
+  readonly args?: string[];
+  readonly command?: string[];
+  readonly dependencies?: string[];
+  readonly env?: k8s.EnvVar[];
+  readonly envFrom?: k8s.EnvFromSource[];
+  readonly image?: string;
+  readonly imagePullPolicy?: string;
+  readonly lifecycle?: k8s.Lifecycle;
+  readonly livenessProbe?: k8s.Probe;
+  readonly name: string;
+  readonly ports?: k8s.ContainerPort[];
+  readonly readinessProbe?: k8s.Probe;
+  readonly resources?: k8s.ResourceRequirements;
+  readonly securityContext?: k8s.SecurityContext;
+  readonly startupProbe?: k8s.Probe;
+  readonly stdin?: boolean;
+  readonly stdinOnce?: boolean;
+  readonly terminationMessagePath?: string;
+  readonly terminationMessagePolicy?: string;
+  readonly tty?: boolean;
+  readonly volumeDevices?: k8s.VolumeDevice[];
+  readonly volumeMounts?: k8s.VolumeMount[];
+  readonly workingDir?: string;
 }
 
 export interface ContainerSetTemplate {
-  containers: ContainerNode[];
-  volumeMounts?: k8s.VolumeMount[];
+  readonly containers: ContainerNode[];
+  readonly volumeMounts?: k8s.VolumeMount[];
 }
 
 export interface ContinueOn {
-  error?: boolean;
-  failed?: boolean;
+  readonly error?: boolean;
+  readonly failed?: boolean;
 }
 
 export interface Counter {
-  value: string;
+  readonly value: string;
 }
 
 export interface CreateCronWorkflowRequest {
-  createOptions?: k8s.CreateOptions;
-  cronWorkflow?: CronWorkflow;
-  namespace?: string;
+  readonly createOptions?: k8s.CreateOptions;
+  readonly cronWorkflow?: CronWorkflow;
+  readonly namespace?: string;
 }
 
 export interface CreateS3BucketOptions {
-  objectLocking?: boolean;
+  readonly objectLocking?: boolean;
 }
 
 export interface CronWorkflow {
-  apiVersion?: string;
-  kind?: string;
-  metadata: k8s.ObjectMeta;
-  spec: CronWorkflowSpec;
-  status?: CronWorkflowStatus;
+  readonly apiVersion?: string;
+  readonly kind?: string;
+  readonly metadata: k8s.ObjectMeta;
+  readonly spec: CronWorkflowSpec;
+  readonly status?: CronWorkflowStatus;
 }
 
 export interface CronWorkflowDeletedResponse {
 }
 
 export interface CronWorkflowList {
-  apiVersion?: string;
-  items: CronWorkflow[];
-  kind?: string;
-  metadata: k8s.ListMeta;
+  readonly apiVersion?: string;
+  readonly items: CronWorkflow[];
+  readonly kind?: string;
+  readonly metadata: k8s.ListMeta;
 }
 
 export interface CronWorkflowResumeRequest {
-  name?: string;
-  namespace?: string;
+  readonly name?: string;
+  readonly namespace?: string;
 }
 
 export interface CronWorkflowSpec {
-  concurrencyPolicy?: string;
-  failedJobsHistoryLimit?: number;
-  schedule: string;
-  startingDeadlineSeconds?: number;
-  successfulJobsHistoryLimit?: number;
-  suspend?: boolean;
-  timezone?: string;
-  workflowMetadata?: k8s.ObjectMeta;
-  workflowSpec: WorkflowSpec;
+  readonly concurrencyPolicy?: string;
+  readonly failedJobsHistoryLimit?: number;
+  readonly schedule: string;
+  readonly startingDeadlineSeconds?: number;
+  readonly successfulJobsHistoryLimit?: number;
+  readonly suspend?: boolean;
+  readonly timezone?: string;
+  readonly workflowMetadata?: k8s.ObjectMeta;
+  readonly workflowSpec: WorkflowSpec;
 }
 
 export interface CronWorkflowStatus {
-  active: k8s.ObjectReference[];
-  conditions: Condition[];
-  lastScheduledTime: Date; // date-time
+  readonly active: k8s.ObjectReference[];
+  readonly conditions: Condition[];
+  readonly lastScheduledTime: Date; // date-time
 }
 
 export interface CronWorkflowSuspendRequest {
-  name?: string;
-  namespace?: string;
+  readonly name?: string;
+  readonly namespace?: string;
 }
 
 export interface DAGTask {
-  arguments?: Arguments;
-  continueOn?: ContinueOn;
-  dependencies?: string[];
-  depends?: string;
-  name: string;
-  onExit?: string;
-  template?: string;
-  templateRef?: TemplateRef;
-  when?: string;
-  withItems?: Item[];
-  withParam?: string;
-  withSequence?: Sequence;
+  readonly arguments?: Arguments;
+  readonly continueOn?: ContinueOn;
+  readonly dependencies?: string[];
+  readonly depends?: string;
+  readonly name: string;
+  readonly onExit?: string;
+  readonly template?: string;
+  readonly templateRef?: TemplateRef;
+  readonly when?: string;
+  readonly withItems?: Item[];
+  readonly withParam?: string;
+  readonly withSequence?: Sequence;
 }
 
 export interface DAGTemplate {
-  failFast?: boolean;
-  target?: string;
-  tasks: DAGTask[];
+  readonly failFast?: boolean;
+  readonly target?: string;
+  readonly tasks: DAGTask[];
 }
 
 export interface Data {
-  source: DataSource;
-  transformation: TransformationStep[];
+  readonly source: DataSource;
+  readonly transformation: TransformationStep[];
 }
 
 export interface DataSource {
-  artifactPaths?: ArtifactPaths;
+  readonly artifactPaths?: ArtifactPaths;
 }
 
 export interface Event {
-  selector: string;
+  readonly selector: string;
 }
 
 export interface EventResponse {
 }
 
 export interface ExecutorConfig {
-  serviceAccountName?: string;
+  readonly serviceAccountName?: string;
 }
 
 export interface GCSArtifact {
-  bucket?: string;
-  key: string;
-  serviceAccountKeySecret?: k8s.SecretKeySelector;
+  readonly bucket?: string;
+  readonly key: string;
+  readonly serviceAccountKeySecret?: k8s.SecretKeySelector;
 }
 
 export interface Gauge {
-  realtime: boolean;
-  value: string;
+  readonly realtime: boolean;
+  readonly value: string;
 }
 
 export interface GetUserInfoResponse {
-  email?: string;
-  emailVerified?: boolean;
-  groups?: string[];
-  issuer?: string;
-  serviceAccountName?: string;
-  subject?: string;
+  readonly email?: string;
+  readonly emailVerified?: boolean;
+  readonly groups?: string[];
+  readonly issuer?: string;
+  readonly serviceAccountName?: string;
+  readonly subject?: string;
 }
 
 export interface GitArtifact {
-  depth?: number;
-  fetch?: string[];
-  insecureIgnoreHostKey?: boolean;
-  passwordSecret?: k8s.SecretKeySelector;
-  repo: string;
-  revision?: string;
-  sshPrivateKeySecret?: k8s.SecretKeySelector;
-  usernameSecret?: k8s.SecretKeySelector;
+  readonly depth?: number;
+  readonly fetch?: string[];
+  readonly insecureIgnoreHostKey?: boolean;
+  readonly passwordSecret?: k8s.SecretKeySelector;
+  readonly repo: string;
+  readonly revision?: string;
+  readonly sshPrivateKeySecret?: k8s.SecretKeySelector;
+  readonly usernameSecret?: k8s.SecretKeySelector;
 }
 
 export interface HDFSArtifact {
-  addresses?: string[];
-  force?: boolean;
-  hdfsUser?: string;
-  krbCCacheSecret?: k8s.SecretKeySelector;
-  krbConfigConfigMap?: k8s.ConfigMapKeySelector;
-  krbKeytabSecret?: k8s.SecretKeySelector;
-  krbRealm?: string;
-  krbServicePrincipalName?: string;
-  krbUsername?: string;
-  path: string;
+  readonly addresses?: string[];
+  readonly force?: boolean;
+  readonly hdfsUser?: string;
+  readonly krbCCacheSecret?: k8s.SecretKeySelector;
+  readonly krbConfigConfigMap?: k8s.ConfigMapKeySelector;
+  readonly krbKeytabSecret?: k8s.SecretKeySelector;
+  readonly krbRealm?: string;
+  readonly krbServicePrincipalName?: string;
+  readonly krbUsername?: string;
+  readonly path: string;
 }
 
 export interface HTTPArtifact {
-  headers?: Header[];
-  url: string;
+  readonly headers?: Header[];
+  readonly url: string;
 }
 
 export interface Header {
-  name: string;
-  value: string;
+  readonly name: string;
+  readonly value: string;
 }
 
 export interface Histogram {
-  buckets: Amount[];
-  value: string;
+  readonly buckets: Amount[];
+  readonly value: string;
 }
 
 export interface InfoResponse {
-  links?: Link[];
-  managedNamespace?: string;
+  readonly links?: Link[];
+  readonly managedNamespace?: string;
 }
 
 export interface Inputs {
-  artifacts?: Artifact[];
-  parameters?: Parameter[];
+  readonly artifacts?: Artifact[];
+  readonly parameters?: Parameter[];
 }
 
 export interface Link {
-  name: string;
-  scope: string;
-  url: string;
+  readonly name: string;
+  readonly scope: string;
+  readonly url: string;
 }
 
 export interface LintCronWorkflowRequest {
-  cronWorkflow?: CronWorkflow;
-  namespace?: string;
+  readonly cronWorkflow?: CronWorkflow;
+  readonly namespace?: string;
 }
 
 export interface LogEntry {
-  content?: string;
-  podName?: string;
+  readonly content?: string;
+  readonly podName?: string;
 }
 
 export interface MemoizationStatus {
-  cacheName: string;
-  hit: boolean;
-  key: string;
+  readonly cacheName: string;
+  readonly hit: boolean;
+  readonly key: string;
 }
 
 export interface Memoize {
-  cache: Cache;
-  key: string;
-  maxAge: string;
+  readonly cache: Cache;
+  readonly key: string;
+  readonly maxAge: string;
 }
 
 export interface Metadata {
-  annotations?: {
+  readonly annotations?: {
     [name: string]: string;
-  }
-  ;
-  labels?: {
+  };
+  readonly labels?: {
     [name: string]: string;
-  }
-  ;
+  };
 }
 
 export interface MetricLabel {
-  key: string;
-  value: string;
+  readonly key: string;
+  readonly value: string;
 }
 
 export interface Metrics {
-  prometheus: Prometheus[];
+  readonly prometheus: Prometheus[];
 }
 
 export interface Mutex {
-  name?: string;
+  readonly name?: string;
 }
 
 export interface MutexHolding {
-  holder?: string;
-  mutex?: string;
+  readonly holder?: string;
+  readonly mutex?: string;
 }
 
 export interface MutexStatus {
-  holding?: MutexHolding[];
-  waiting?: MutexHolding[];
+  readonly holding?: MutexHolding[];
+  readonly waiting?: MutexHolding[];
 }
 
 export interface NodeStatus {
-  boundaryID?: string;
-  children?: string[];
-  daemoned?: boolean;
-  displayName?: string;
-  estimatedDuration?: number;
-  finishedAt?: Date; // date-time
-  hostNodeName?: string;
-  id: string;
-  inputs?: Inputs;
-  memoizationStatus?: MemoizationStatus;
-  message?: string;
-  name: string;
-  outboundNodes?: string[];
-  outputs?: Outputs;
-  phase?: string;
-  podIP?: string;
-  progress?: string;
-  resourcesDuration?: {
+  readonly boundaryID?: string;
+  readonly children?: string[];
+  readonly daemoned?: boolean;
+  readonly displayName?: string;
+  readonly estimatedDuration?: number;
+  readonly finishedAt?: Date; // date-time
+  readonly hostNodeName?: string;
+  readonly id: string;
+  readonly inputs?: Inputs;
+  readonly memoizationStatus?: MemoizationStatus;
+  readonly message?: string;
+  readonly name: string;
+  readonly outboundNodes?: string[];
+  readonly outputs?: Outputs;
+  readonly phase?: string;
+  readonly podIP?: string;
+  readonly progress?: string;
+  readonly resourcesDuration?: {
     [name: string]: number; // int64
-  }
-  ;
-  startedAt?: Date; // date-time
-  synchronizationStatus?: NodeSynchronizationStatus;
-  templateName?: string;
-  templateRef?: TemplateRef;
-  templateScope?: string;
-  type: string;
+  };
+  readonly startedAt?: Date; // date-time
+  readonly synchronizationStatus?: NodeSynchronizationStatus;
+  readonly templateName?: string;
+  readonly templateRef?: TemplateRef;
+  readonly templateScope?: string;
+  readonly type: string;
 }
 
 export interface NodeSynchronizationStatus {
-  waiting?: string;
+  readonly waiting?: string;
 }
 
 export interface NoneStrategy {
 }
 
 export interface OSSArtifact {
-  accessKeySecret?: k8s.SecretKeySelector;
-  bucket?: string;
-  createBucketIfNotPresent?: boolean;
-  endpoint?: string;
-  key: string;
-  secretKeySecret?: k8s.SecretKeySelector;
-  securityToken?: string;
+  readonly accessKeySecret?: k8s.SecretKeySelector;
+  readonly bucket?: string;
+  readonly createBucketIfNotPresent?: boolean;
+  readonly endpoint?: string;
+  readonly key: string;
+  readonly secretKeySecret?: k8s.SecretKeySelector;
+  readonly securityToken?: string;
 }
 
 export interface Outputs {
-  artifacts?: Artifact[];
-  exitCode?: string;
-  parameters?: Parameter[];
-  result?: string;
+  readonly artifacts?: Artifact[];
+  readonly exitCode?: string;
+  readonly parameters?: Parameter[];
+  readonly result?: string;
 }
 
 export type ParallelSteps = WorkflowStep[];
 export interface Parameter {
-  default?: string;
-  enum?: string[];
-  globalName?: string;
-  name: string;
-  value?: string;
-  valueFrom?: ValueFrom;
+  readonly default?: string;
+  readonly enum?: string[];
+  readonly globalName?: string;
+  readonly name: string;
+  readonly value?: string;
+  readonly valueFrom?: ValueFrom;
 }
 
 export interface PodGC {
-  labelSelector?: k8s.LabelSelector;
-  strategy?: string;
+  readonly labelSelector?: k8s.LabelSelector;
+  readonly strategy?: string;
 }
 
 export interface Prometheus {
-  counter?: Counter;
-  gauge?: Gauge;
-  help: string;
-  histogram?: Histogram;
-  labels?: MetricLabel[];
-  name: string;
-  when?: string;
+  readonly counter?: Counter;
+  readonly gauge?: Gauge;
+  readonly help: string;
+  readonly histogram?: Histogram;
+  readonly labels?: MetricLabel[];
+  readonly name: string;
+  readonly when?: string;
 }
 
 export interface RawArtifact {
-  data: string;
+  readonly data: string;
 }
 
 export interface ResourceTemplate {
-  action: string;
-  failureCondition?: string;
-  flags?: string[];
-  manifest?: string;
-  mergeStrategy?: string;
-  setOwnerReference?: boolean;
-  successCondition?: string;
+  readonly action: string;
+  readonly failureCondition?: string;
+  readonly flags?: string[];
+  readonly manifest?: string;
+  readonly mergeStrategy?: string;
+  readonly setOwnerReference?: boolean;
+  readonly successCondition?: string;
 }
 
 export interface RetryAffinity {
-  nodeAntiAffinity?: RetryNodeAntiAffinity;
+  readonly nodeAntiAffinity?: RetryNodeAntiAffinity;
 }
 
 export interface RetryNodeAntiAffinity {
 }
 
 export interface RetryStrategy {
-  affinity?: RetryAffinity;
-  backoff?: Backoff;
-  limit?: k8s.IntOrString;
-  retryPolicy?: string;
+  readonly affinity?: RetryAffinity;
+  readonly backoff?: Backoff;
+  readonly limit?: k8s.IntOrString;
+  readonly retryPolicy?: string;
 }
 
 export interface S3Artifact {
-  accessKeySecret?: k8s.SecretKeySelector;
-  bucket?: string;
-  createBucketIfNotPresent?: CreateS3BucketOptions;
-  endpoint?: string;
-  insecure?: boolean;
-  key?: string;
-  region?: string;
-  roleARN?: string;
-  secretKeySecret?: k8s.SecretKeySelector;
-  useSDKCreds?: boolean;
+  readonly accessKeySecret?: k8s.SecretKeySelector;
+  readonly bucket?: string;
+  readonly createBucketIfNotPresent?: CreateS3BucketOptions;
+  readonly endpoint?: string;
+  readonly insecure?: boolean;
+  readonly key?: string;
+  readonly region?: string;
+  readonly roleARN?: string;
+  readonly secretKeySecret?: k8s.SecretKeySelector;
+  readonly useSDKCreds?: boolean;
 }
 
 export interface ScriptTemplate {
-  args?: string[];
-  command?: string[];
-  env?: k8s.EnvVar[];
-  envFrom?: k8s.EnvFromSource[];
-  image: string;
-  imagePullPolicy?: string;
-  lifecycle?: k8s.Lifecycle;
-  livenessProbe?: k8s.Probe;
-  name?: string;
-  ports?: k8s.ContainerPort[];
-  readinessProbe?: k8s.Probe;
-  resources?: k8s.ResourceRequirements;
-  securityContext?: k8s.SecurityContext;
-  source: string;
-  startupProbe?: k8s.Probe;
-  stdin?: boolean;
-  stdinOnce?: boolean;
-  terminationMessagePath?: string;
-  terminationMessagePolicy?: string;
-  tty?: boolean;
-  volumeDevices?: k8s.VolumeDevice[];
-  volumeMounts?: k8s.VolumeMount[];
-  workingDir?: string;
+  readonly args?: string[];
+  readonly command?: string[];
+  readonly env?: k8s.EnvVar[];
+  readonly envFrom?: k8s.EnvFromSource[];
+  readonly image: string;
+  readonly imagePullPolicy?: string;
+  readonly lifecycle?: k8s.Lifecycle;
+  readonly livenessProbe?: k8s.Probe;
+  readonly name?: string;
+  readonly ports?: k8s.ContainerPort[];
+  readonly readinessProbe?: k8s.Probe;
+  readonly resources?: k8s.ResourceRequirements;
+  readonly securityContext?: k8s.SecurityContext;
+  readonly source: string;
+  readonly startupProbe?: k8s.Probe;
+  readonly stdin?: boolean;
+  readonly stdinOnce?: boolean;
+  readonly terminationMessagePath?: string;
+  readonly terminationMessagePolicy?: string;
+  readonly tty?: boolean;
+  readonly volumeDevices?: k8s.VolumeDevice[];
+  readonly volumeMounts?: k8s.VolumeMount[];
+  readonly workingDir?: string;
 }
 
 export interface SemaphoreHolding {
-  holders?: string[];
-  semaphore?: string;
+  readonly holders?: string[];
+  readonly semaphore?: string;
 }
 
 export interface SemaphoreRef {
-  configMapKeyRef?: k8s.ConfigMapKeySelector;
+  readonly configMapKeyRef?: k8s.ConfigMapKeySelector;
 }
 
 export interface SemaphoreStatus {
-  holding?: SemaphoreHolding[];
-  waiting?: SemaphoreHolding[];
+  readonly holding?: SemaphoreHolding[];
+  readonly waiting?: SemaphoreHolding[];
 }
 
 export interface Sequence {
-  count?: k8s.IntOrString;
-  end?: k8s.IntOrString;
-  format?: string;
-  start?: k8s.IntOrString;
+  readonly count?: k8s.IntOrString;
+  readonly end?: k8s.IntOrString;
+  readonly format?: string;
+  readonly start?: k8s.IntOrString;
 }
 
 export interface Submit {
-  arguments?: Arguments;
-  metadata?: k8s.ObjectMeta;
-  workflowTemplateRef: WorkflowTemplateRef;
+  readonly arguments?: Arguments;
+  readonly metadata?: k8s.ObjectMeta;
+  readonly workflowTemplateRef: WorkflowTemplateRef;
 }
 
 export interface SubmitOpts {
-  annotations?: string;
-  dryRun?: boolean;
-  entryPoint?: string;
-  generateName?: string;
-  labels?: string;
-  name?: string;
-  ownerReference?: k8s.OwnerReference;
-  parameterFile?: string;
-  parameters?: string[];
-  serverDryRun?: boolean;
-  serviceAccount?: string;
+  readonly annotations?: string;
+  readonly dryRun?: boolean;
+  readonly entryPoint?: string;
+  readonly generateName?: string;
+  readonly labels?: string;
+  readonly name?: string;
+  readonly ownerReference?: k8s.OwnerReference;
+  readonly parameterFile?: string;
+  readonly parameters?: string[];
+  readonly serverDryRun?: boolean;
+  readonly serviceAccount?: string;
 }
 
 export interface SuppliedValueFrom {
 }
 
 export interface SuspendTemplate {
-  duration?: string;
+  readonly duration?: string;
 }
 
 export interface Synchronization {
-  mutex?: Mutex;
-  semaphore?: SemaphoreRef;
+  readonly mutex?: Mutex;
+  readonly semaphore?: SemaphoreRef;
 }
 
 export interface SynchronizationStatus {
-  mutex?: MutexStatus;
-  semaphore?: SemaphoreStatus;
+  readonly mutex?: MutexStatus;
+  readonly semaphore?: SemaphoreStatus;
 }
 
 export interface TTLStrategy {
-  secondsAfterCompletion?: number;
-  secondsAfterFailure?: number;
-  secondsAfterSuccess?: number;
+  readonly secondsAfterCompletion?: number;
+  readonly secondsAfterFailure?: number;
+  readonly secondsAfterSuccess?: number;
 }
 
 export interface TarStrategy {
-  compressionLevel?: number;
+  readonly compressionLevel?: number;
 }
 
 export interface Template {
-  activeDeadlineSeconds?: k8s.IntOrString;
-  affinity?: k8s.Affinity;
-  archiveLocation?: ArtifactLocation;
-  automountServiceAccountToken?: boolean;
-  container?: k8s.Container;
-  containerSet?: ContainerSetTemplate;
-  daemon?: boolean;
-  dag?: DAGTemplate;
-  data?: Data;
-  executor?: ExecutorConfig;
-  failFast?: boolean;
-  hostAliases?: k8s.HostAlias[];
-  initContainers?: UserContainer[];
-  inputs?: Inputs;
-  memoize?: Memoize;
-  metadata?: Metadata;
-  metrics?: Metrics;
-  name?: string;
-  nodeSelector?: {
+  readonly activeDeadlineSeconds?: k8s.IntOrString;
+  readonly affinity?: k8s.Affinity;
+  readonly archiveLocation?: ArtifactLocation;
+  readonly automountServiceAccountToken?: boolean;
+  readonly container?: k8s.Container;
+  readonly containerSet?: ContainerSetTemplate;
+  readonly daemon?: boolean;
+  readonly dag?: DAGTemplate;
+  readonly data?: Data;
+  readonly executor?: ExecutorConfig;
+  readonly failFast?: boolean;
+  readonly hostAliases?: k8s.HostAlias[];
+  readonly initContainers?: UserContainer[];
+  readonly inputs?: Inputs;
+  readonly memoize?: Memoize;
+  readonly metadata?: Metadata;
+  readonly metrics?: Metrics;
+  readonly name?: string;
+  readonly nodeSelector?: {
     [name: string]: string;
-  }
-  ;
-  outputs?: Outputs;
-  parallelism?: number;
-  podSpecPatch?: string;
-  priority?: number;
-  priorityClassName?: string;
-  resource?: ResourceTemplate;
-  retryStrategy?: RetryStrategy;
-  schedulerName?: string;
-  script?: ScriptTemplate;
-  securityContext?: k8s.PodSecurityContext;
-  serviceAccountName?: string;
-  sidecars?: UserContainer[];
-  steps?: ParallelSteps[];
-  suspend?: SuspendTemplate;
-  synchronization?: Synchronization;
-  timeout?: string;
-  tolerations?: k8s.Toleration[];
-  volumes?: k8s.Volume[];
+  };
+  readonly outputs?: Outputs;
+  readonly parallelism?: number;
+  readonly podSpecPatch?: string;
+  readonly priority?: number;
+  readonly priorityClassName?: string;
+  readonly resource?: ResourceTemplate;
+  readonly retryStrategy?: RetryStrategy;
+  readonly schedulerName?: string;
+  readonly script?: ScriptTemplate;
+  readonly securityContext?: k8s.PodSecurityContext;
+  readonly serviceAccountName?: string;
+  readonly sidecars?: UserContainer[];
+  readonly steps?: ParallelSteps[];
+  readonly suspend?: SuspendTemplate;
+  readonly synchronization?: Synchronization;
+  readonly timeout?: string;
+  readonly tolerations?: k8s.Toleration[];
+  readonly volumes?: k8s.Volume[];
 }
 
 export interface TemplateRef {
-  clusterScope?: boolean;
-  name?: string;
-  template?: string;
+  readonly clusterScope?: boolean;
+  readonly name?: string;
+  readonly template?: string;
 }
 
 export interface TransformationStep {
-  expression: string;
+  readonly expression: string;
 }
 
 export interface UpdateCronWorkflowRequest {
-  cronWorkflow?: CronWorkflow;
-  name?: string;
-  namespace?: string;
+  readonly cronWorkflow?: CronWorkflow;
+  readonly name?: string;
+  readonly namespace?: string;
 }
 
 export interface UserContainer {
-  args?: string[];
-  command?: string[];
-  env?: k8s.EnvVar[];
-  envFrom?: k8s.EnvFromSource[];
-  image?: string;
-  imagePullPolicy?: string;
-  lifecycle?: k8s.Lifecycle;
-  livenessProbe?: k8s.Probe;
-  mirrorVolumeMounts?: boolean;
-  name: string;
-  ports?: k8s.ContainerPort[];
-  readinessProbe?: k8s.Probe;
-  resources?: k8s.ResourceRequirements;
-  securityContext?: k8s.SecurityContext;
-  startupProbe?: k8s.Probe;
-  stdin?: boolean;
-  stdinOnce?: boolean;
-  terminationMessagePath?: string;
-  terminationMessagePolicy?: string;
-  tty?: boolean;
-  volumeDevices?: k8s.VolumeDevice[];
-  volumeMounts?: k8s.VolumeMount[];
-  workingDir?: string;
+  readonly args?: string[];
+  readonly command?: string[];
+  readonly env?: k8s.EnvVar[];
+  readonly envFrom?: k8s.EnvFromSource[];
+  readonly image?: string;
+  readonly imagePullPolicy?: string;
+  readonly lifecycle?: k8s.Lifecycle;
+  readonly livenessProbe?: k8s.Probe;
+  readonly mirrorVolumeMounts?: boolean;
+  readonly name: string;
+  readonly ports?: k8s.ContainerPort[];
+  readonly readinessProbe?: k8s.Probe;
+  readonly resources?: k8s.ResourceRequirements;
+  readonly securityContext?: k8s.SecurityContext;
+  readonly startupProbe?: k8s.Probe;
+  readonly stdin?: boolean;
+  readonly stdinOnce?: boolean;
+  readonly terminationMessagePath?: string;
+  readonly terminationMessagePolicy?: string;
+  readonly tty?: boolean;
+  readonly volumeDevices?: k8s.VolumeDevice[];
+  readonly volumeMounts?: k8s.VolumeMount[];
+  readonly workingDir?: string;
 }
 
 export interface ValueFrom {
-  default?: string;
-  event?: string;
-  expression?: string;
-  jqFilter?: string;
-  jsonPath?: string;
-  parameter?: string;
-  path?: string;
-  supplied?: SuppliedValueFrom;
+  readonly default?: string;
+  readonly event?: string;
+  readonly expression?: string;
+  readonly jqFilter?: string;
+  readonly jsonPath?: string;
+  readonly parameter?: string;
+  readonly path?: string;
+  readonly supplied?: SuppliedValueFrom;
 }
 
 export interface Version {
-  buildDate: string;
-  compiler: string;
-  gitCommit: string;
-  gitTag: string;
-  gitTreeState: string;
-  goVersion: string;
-  platform: string;
-  version: string;
+  readonly buildDate: string;
+  readonly compiler: string;
+  readonly gitCommit: string;
+  readonly gitTag: string;
+  readonly gitTreeState: string;
+  readonly goVersion: string;
+  readonly platform: string;
+  readonly version: string;
 }
 
 export interface VolumeClaimGC {
-  strategy?: string;
+  readonly strategy?: string;
 }
 
 export interface Workflow {
-  apiVersion?: string;
-  kind?: string;
-  metadata: k8s.ObjectMeta;
-  spec: WorkflowSpec;
-  status?: WorkflowStatus;
+  readonly apiVersion?: string;
+  readonly kind?: string;
+  readonly metadata: k8s.ObjectMeta;
+  readonly spec: WorkflowSpec;
+  readonly status?: WorkflowStatus;
 }
 
 export interface WorkflowCreateRequest {
-  createOptions?: k8s.CreateOptions;
-  instanceID?: string;
-  namespace?: string;
-  serverDryRun?: boolean;
-  workflow?: Workflow;
+  readonly createOptions?: k8s.CreateOptions;
+  readonly instanceID?: string;
+  readonly namespace?: string;
+  readonly serverDryRun?: boolean;
+  readonly workflow?: Workflow;
 }
 
 export interface WorkflowDeleteResponse {
 }
 
 export interface WorkflowEventBinding {
-  apiVersion?: string;
-  kind?: string;
-  metadata: k8s.ObjectMeta;
-  spec: WorkflowEventBindingSpec;
+  readonly apiVersion?: string;
+  readonly kind?: string;
+  readonly metadata: k8s.ObjectMeta;
+  readonly spec: WorkflowEventBindingSpec;
 }
 
 export interface WorkflowEventBindingList {
-  apiVersion?: string;
-  items: WorkflowEventBinding[];
-  kind?: string;
-  metadata: k8s.ListMeta;
+  readonly apiVersion?: string;
+  readonly items: WorkflowEventBinding[];
+  readonly kind?: string;
+  readonly metadata: k8s.ListMeta;
 }
 
 export interface WorkflowEventBindingSpec {
-  event: Event;
-  submit?: Submit;
+  readonly event: Event;
+  readonly submit?: Submit;
 }
 
 export interface WorkflowLintRequest {
-  namespace?: string;
-  workflow?: Workflow;
+  readonly namespace?: string;
+  readonly workflow?: Workflow;
 }
 
 export interface WorkflowList {
-  apiVersion?: string;
-  items: Workflow[];
-  kind?: string;
-  metadata: k8s.ListMeta;
+  readonly apiVersion?: string;
+  readonly items: Workflow[];
+  readonly kind?: string;
+  readonly metadata: k8s.ListMeta;
 }
 
 export interface WorkflowResubmitRequest {
-  memoized?: boolean;
-  name?: string;
-  namespace?: string;
+  readonly memoized?: boolean;
+  readonly name?: string;
+  readonly namespace?: string;
 }
 
 export interface WorkflowResumeRequest {
-  name?: string;
-  namespace?: string;
-  nodeFieldSelector?: string;
+  readonly name?: string;
+  readonly namespace?: string;
+  readonly nodeFieldSelector?: string;
 }
 
 export interface WorkflowRetryRequest {
-  name?: string;
-  namespace?: string;
-  nodeFieldSelector?: string;
-  restartSuccessful?: boolean;
+  readonly name?: string;
+  readonly namespace?: string;
+  readonly nodeFieldSelector?: string;
+  readonly restartSuccessful?: boolean;
 }
 
 export interface WorkflowSetRequest {
-  message?: string;
-  name?: string;
-  namespace?: string;
-  nodeFieldSelector?: string;
-  outputParameters?: string;
-  phase?: string;
+  readonly message?: string;
+  readonly name?: string;
+  readonly namespace?: string;
+  readonly nodeFieldSelector?: string;
+  readonly outputParameters?: string;
+  readonly phase?: string;
 }
 
 export interface WorkflowSpec {
-  activeDeadlineSeconds?: number;
-  affinity?: k8s.Affinity;
-  arguments?: Arguments;
-  artifactRepositoryRef?: ArtifactRepositoryRef;
-  automountServiceAccountToken?: boolean;
-  dnsConfig?: k8s.PodDnsConfig;
-  dnsPolicy?: string;
-  entrypoint?: string;
-  executor?: ExecutorConfig;
-  hostAliases?: k8s.HostAlias[];
-  hostNetwork?: boolean;
-  imagePullSecrets?: k8s.LocalObjectReference[];
-  metrics?: Metrics;
-  nodeSelector?: {
+  readonly activeDeadlineSeconds?: number;
+  readonly affinity?: k8s.Affinity;
+  readonly arguments?: Arguments;
+  readonly artifactRepositoryRef?: ArtifactRepositoryRef;
+  readonly automountServiceAccountToken?: boolean;
+  readonly dnsConfig?: k8s.PodDnsConfig;
+  readonly dnsPolicy?: string;
+  readonly entrypoint?: string;
+  readonly executor?: ExecutorConfig;
+  readonly hostAliases?: k8s.HostAlias[];
+  readonly hostNetwork?: boolean;
+  readonly imagePullSecrets?: k8s.LocalObjectReference[];
+  readonly metrics?: Metrics;
+  readonly nodeSelector?: {
     [name: string]: string;
-  }
-  ;
-  onExit?: string;
-  parallelism?: number;
-  podDisruptionBudget?: k8s.PodDisruptionBudgetSpec;
-  podGC?: PodGC;
-  podMetadata?: Metadata;
-  podPriority?: number;
-  podPriorityClassName?: string;
-  podSpecPatch?: string;
-  priority?: number;
-  retryStrategy?: RetryStrategy;
-  schedulerName?: string;
-  securityContext?: k8s.PodSecurityContext;
-  serviceAccountName?: string;
-  shutdown?: string;
-  suspend?: boolean;
-  synchronization?: Synchronization;
-  templateDefaults?: Template;
-  templates?: Template[];
-  tolerations?: k8s.Toleration[];
-  ttlStrategy?: TTLStrategy;
-  volumeClaimGC?: VolumeClaimGC;
-  volumeClaimTemplates?: k8s.PersistentVolumeClaimSpec[];
-  volumes?: k8s.Volume[];
-  workflowTemplateRef?: WorkflowTemplateRef;
+  };
+  readonly onExit?: string;
+  readonly parallelism?: number;
+  readonly podDisruptionBudget?: k8s.PodDisruptionBudgetSpec;
+  readonly podGC?: PodGC;
+  readonly podMetadata?: Metadata;
+  readonly podPriority?: number;
+  readonly podPriorityClassName?: string;
+  readonly podSpecPatch?: string;
+  readonly priority?: number;
+  readonly retryStrategy?: RetryStrategy;
+  readonly schedulerName?: string;
+  readonly securityContext?: k8s.PodSecurityContext;
+  readonly serviceAccountName?: string;
+  readonly shutdown?: string;
+  readonly suspend?: boolean;
+  readonly synchronization?: Synchronization;
+  readonly templateDefaults?: Template;
+  readonly templates?: Template[];
+  readonly tolerations?: k8s.Toleration[];
+  readonly ttlStrategy?: TTLStrategy;
+  readonly volumeClaimGC?: VolumeClaimGC;
+  readonly volumeClaimTemplates?: k8s.PersistentVolumeClaimSpec[];
+  readonly volumes?: k8s.Volume[];
+  readonly workflowTemplateRef?: WorkflowTemplateRef;
 }
 
 export interface WorkflowStatus {
-  artifactRepositoryRef?: ArtifactRepositoryRefStatus;
-  compressedNodes?: string;
-  conditions?: Condition[];
-  estimatedDuration?: number;
-  finishedAt?: Date; // date-time
-  message?: string;
-  nodes?: {
+  readonly artifactRepositoryRef?: ArtifactRepositoryRefStatus;
+  readonly compressedNodes?: string;
+  readonly conditions?: Condition[];
+  readonly estimatedDuration?: number;
+  readonly finishedAt?: Date; // date-time
+  readonly message?: string;
+  readonly nodes?: {
     [name: string]: NodeStatus;
-  }
-  ;
-  offloadNodeStatusVersion?: string;
-  outputs?: Outputs;
-  PersistentVolumeClaimSpecs?: k8s.Volume[];
-  phase?: string;
-  progress?: string;
-  resourcesDuration?: {
+  };
+  readonly offloadNodeStatusVersion?: string;
+  readonly outputs?: Outputs;
+  readonly PersistentVolumeClaimSpecs?: k8s.Volume[];
+  readonly phase?: string;
+  readonly progress?: string;
+  readonly resourcesDuration?: {
     [name: string]: number; // int64
-  }
-  ;
-  startedAt?: Date; // date-time
-  storedTemplates?: {
+  };
+  readonly startedAt?: Date; // date-time
+  readonly storedTemplates?: {
     [name: string]: Template;
-  }
-  ;
-  storedWorkflowTemplateSpec?: WorkflowSpec;
-  synchronization?: SynchronizationStatus;
+  };
+  readonly storedWorkflowTemplateSpec?: WorkflowSpec;
+  readonly synchronization?: SynchronizationStatus;
 }
 
 export interface WorkflowStep {
-  arguments?: Arguments;
-  continueOn?: ContinueOn;
-  name?: string;
-  onExit?: string;
-  template?: string;
-  templateRef?: TemplateRef;
-  when?: string;
-  withItems?: Item[];
-  withParam?: string;
-  withSequence?: Sequence;
+  readonly arguments?: Arguments;
+  readonly continueOn?: ContinueOn;
+  readonly name?: string;
+  readonly onExit?: string;
+  readonly template?: string;
+  readonly templateRef?: TemplateRef;
+  readonly when?: string;
+  readonly withItems?: Item[];
+  readonly withParam?: string;
+  readonly withSequence?: Sequence;
 }
 
 export interface WorkflowStopRequest {
-  message?: string;
-  name?: string;
-  namespace?: string;
-  nodeFieldSelector?: string;
+  readonly message?: string;
+  readonly name?: string;
+  readonly namespace?: string;
+  readonly nodeFieldSelector?: string;
 }
 
 export interface WorkflowSubmitRequest {
-  namespace?: string;
-  resourceKind?: string;
-  resourceName?: string;
-  submitOptions?: SubmitOpts;
+  readonly namespace?: string;
+  readonly resourceKind?: string;
+  readonly resourceName?: string;
+  readonly submitOptions?: SubmitOpts;
 }
 
 export interface WorkflowSuspendRequest {
-  name?: string;
-  namespace?: string;
+  readonly name?: string;
+  readonly namespace?: string;
 }
 
 export interface WorkflowTemplate {
-  apiVersion?: string;
-  kind?: string;
-  metadata: k8s.ObjectMeta;
-  spec: WorkflowTemplateSpec;
+  readonly apiVersion?: string;
+  readonly kind?: string;
+  readonly metadata: k8s.ObjectMeta;
+  readonly spec: WorkflowTemplateSpec;
 }
 
 export interface WorkflowTemplateCreateRequest {
-  createOptions?: k8s.CreateOptions;
-  namespace?: string;
-  template?: WorkflowTemplate;
+  readonly createOptions?: k8s.CreateOptions;
+  readonly namespace?: string;
+  readonly template?: WorkflowTemplate;
 }
 
 export interface WorkflowTemplateDeleteResponse {
 }
 
 export interface WorkflowTemplateLintRequest {
-  createOptions?: k8s.CreateOptions;
-  namespace?: string;
-  template?: WorkflowTemplate;
+  readonly createOptions?: k8s.CreateOptions;
+  readonly namespace?: string;
+  readonly template?: WorkflowTemplate;
 }
 
 export interface WorkflowTemplateList {
-  apiVersion?: string;
-  items: WorkflowTemplate[];
-  kind?: string;
-  metadata: k8s.ListMeta;
+  readonly apiVersion?: string;
+  readonly items: WorkflowTemplate[];
+  readonly kind?: string;
+  readonly metadata: k8s.ListMeta;
 }
 
 export interface WorkflowTemplateRef {
-  clusterScope?: boolean;
-  name?: string;
+  readonly clusterScope?: boolean;
+  readonly name?: string;
 }
 
 export interface WorkflowTemplateSpec {
-  activeDeadlineSeconds?: number;
-  affinity?: k8s.Affinity;
-  arguments?: Arguments;
-  artifactRepositoryRef?: ArtifactRepositoryRef;
-  automountServiceAccountToken?: boolean;
-  dnsConfig?: k8s.PodDnsConfig;
-  dnsPolicy?: string;
-  entrypoint?: string;
-  executor?: ExecutorConfig;
-  hostAliases?: k8s.HostAlias[];
-  hostNetwork?: boolean;
-  imagePullSecrets?: k8s.LocalObjectReference[];
-  metrics?: Metrics;
-  nodeSelector?: {
+  readonly activeDeadlineSeconds?: number;
+  readonly affinity?: k8s.Affinity;
+  readonly arguments?: Arguments;
+  readonly artifactRepositoryRef?: ArtifactRepositoryRef;
+  readonly automountServiceAccountToken?: boolean;
+  readonly dnsConfig?: k8s.PodDnsConfig;
+  readonly dnsPolicy?: string;
+  readonly entrypoint?: string;
+  readonly executor?: ExecutorConfig;
+  readonly hostAliases?: k8s.HostAlias[];
+  readonly hostNetwork?: boolean;
+  readonly imagePullSecrets?: k8s.LocalObjectReference[];
+  readonly metrics?: Metrics;
+  readonly nodeSelector?: {
     [name: string]: string;
-  }
-  ;
-  onExit?: string;
-  parallelism?: number;
-  podDisruptionBudget?: k8s.PodDisruptionBudgetSpec;
-  podGC?: PodGC;
-  podMetadata?: Metadata;
-  podPriority?: number;
-  podPriorityClassName?: string;
-  podSpecPatch?: string;
-  priority?: number;
-  retryStrategy?: RetryStrategy;
-  schedulerName?: string;
-  securityContext?: k8s.PodSecurityContext;
-  serviceAccountName?: string;
-  shutdown?: string;
-  suspend?: boolean;
-  synchronization?: Synchronization;
-  templateDefaults?: Template;
-  templates?: Template[];
-  tolerations?: k8s.Toleration[];
-  ttlStrategy?: TTLStrategy;
-  volumeClaimGC?: VolumeClaimGC;
-  volumeClaimTemplates?: k8s.PersistentVolumeClaimSpec[];
-  volumes?: k8s.Volume[];
-  workflowMetadata?: k8s.ObjectMeta;
-  workflowTemplateRef?: WorkflowTemplateRef;
+  };
+  readonly onExit?: string;
+  readonly parallelism?: number;
+  readonly podDisruptionBudget?: k8s.PodDisruptionBudgetSpec;
+  readonly podGC?: PodGC;
+  readonly podMetadata?: Metadata;
+  readonly podPriority?: number;
+  readonly podPriorityClassName?: string;
+  readonly podSpecPatch?: string;
+  readonly priority?: number;
+  readonly retryStrategy?: RetryStrategy;
+  readonly schedulerName?: string;
+  readonly securityContext?: k8s.PodSecurityContext;
+  readonly serviceAccountName?: string;
+  readonly shutdown?: string;
+  readonly suspend?: boolean;
+  readonly synchronization?: Synchronization;
+  readonly templateDefaults?: Template;
+  readonly templates?: Template[];
+  readonly tolerations?: k8s.Toleration[];
+  readonly ttlStrategy?: TTLStrategy;
+  readonly volumeClaimGC?: VolumeClaimGC;
+  readonly volumeClaimTemplates?: k8s.PersistentVolumeClaimSpec[];
+  readonly volumes?: k8s.Volume[];
+  readonly workflowMetadata?: k8s.ObjectMeta;
+  readonly workflowTemplateRef?: WorkflowTemplateRef;
 }
 
 export interface WorkflowTemplateUpdateRequest {
-  name?: string;
-  namespace?: string;
-  template?: WorkflowTemplate;
+  readonly name?: string;
+  readonly namespace?: string;
+  readonly template?: WorkflowTemplate;
 }
 
 export interface WorkflowTerminateRequest {
-  name?: string;
-  namespace?: string;
+  readonly name?: string;
+  readonly namespace?: string;
 }
 
 export interface WorkflowWatchEvent {
-  object?: Workflow;
-  type?: string;
+  readonly object?: Workflow;
+  readonly type?: string;
 }
 
 export interface ZipStrategy {
