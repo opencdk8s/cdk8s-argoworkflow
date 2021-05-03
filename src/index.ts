@@ -1,14 +1,15 @@
 import { ApiObject, GroupVersionKind } from 'cdk8s';
 import { Construct } from 'constructs';
 import * as k8s from './imports/k8s';
+export * as k8s from './imports/k8s';
 
 export type Item = any;
 
 export type Amount = number;
 
 export interface GoogleProtobufAny {
-  readonly type_url?: string;
-  readonly  value?: string; // byte
+  readonly typeUrl?: string;
+  readonly value?: string; // byte
 }
 
 export interface GrpcGatewayRuntimeError {
@@ -20,9 +21,9 @@ export interface GrpcGatewayRuntimeError {
 
 export interface GrpcGatewayRuntimeStreamError {
   readonly details?: GoogleProtobufAny[];
-  readonly grpc_code?: number;
-  readonly http_code?: number;
-  readonly http_status?: string;
+  readonly grpcCode?: number;
+  readonly httpCode?: number;
+  readonly httpStatus?: string;
   readonly message?: string;
 }
 
@@ -129,11 +130,6 @@ export interface ClusterWorkflowTemplate {
   readonly kind?: string;
   readonly metadata: k8s.ObjectMeta;
   readonly spec: WorkflowTemplateSpec;
-}
-
-export interface ClusterWorkflowTemplateCreateRequest {
-  readonly createOptions?: k8s.CreateOptions;
-  readonly template?: ClusterWorkflowTemplate;
 }
 
 export interface ClusterWorkflowTemplateDeleteResponse {
@@ -884,7 +880,7 @@ export interface WorkflowStatus {
   };
   readonly offloadNodeStatusVersion?: string;
   readonly outputs?: Outputs;
-  readonly PersistentVolumeClaimSpecs?: k8s.Volume[];
+  readonly persistentVolumeClaimSpecs?: k8s.Volume[];
   readonly phase?: string;
   readonly progress?: string;
   readonly resourcesDuration?: {
