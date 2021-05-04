@@ -17768,14 +17768,14 @@ export interface GroupVersionResource {
 }
 
 export interface CreateOptions {
-  readonly Kind: string;
-  readonly APIVersion: string;
-  readonly DryRun: string[];
-  readonly FieldManager: string;
+  readonly kind: string;
+  readonly apiVersion: string;
+  readonly dryRun: string[];
+  readonly fieldManager: string;
 }
 
 
-export interface sshKey {
+export interface SshKey {
   readonly name: string;
   readonly key: string;
 }
