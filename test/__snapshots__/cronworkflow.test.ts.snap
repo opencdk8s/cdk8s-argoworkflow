@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CronWorkflow 1`] = `
+Array [
+  Object {
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "CronWorkflow",
+    "metadata": Object {
+      "name": "asd",
+    },
+    "spec": Object {
+      "concurrencyPolicy": "Replace",
+      "schedule": "* * * * *",
+      "startingDeadlineSeconds": 0,
+      "workflowSpec": Object {
+        "entrypoint": "whalesay",
+        "templates": Array [
+          Object {
+            "container": Object {
+              "args": Array [
+                "date; sleep 90",
+              ],
+              "command": Array [
+                "sh",
+                "-c",
+              ],
+              "image": "alpine:latest",
+              "name": "asd",
+            },
+            "name": "asd",
+          },
+        ],
+      },
+    },
+  },
+]
+`;

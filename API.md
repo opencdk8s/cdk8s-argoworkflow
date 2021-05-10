@@ -4,7 +4,8 @@
 
 Name|Description
 ----|-----------
-[ArgoWorkflow](#cdk8s-argoworkflow-argoworkflow)|*No description*
+[ArgoWorkflowClusterWorkflowTemplate](#cdk8s-argoworkflow-argoworkflowclusterworkflowtemplate)|*No description*
+[ArgoWorkflowCronWorkflow](#cdk8s-argoworkflow-argoworkflowcronworkflow)|*No description*
 [k8s.IntOrString](#cdk8s-argoworkflow-k8s-intorstring)|*No description*
 [k8s.KubeApiService](#cdk8s-argoworkflow-k8s-kubeapiservice)|APIService represents a server for a particular GroupVersion.
 [k8s.KubeApiServiceList](#cdk8s-argoworkflow-k8s-kubeapiservicelist)|APIServiceList is a list of APIService objects.
@@ -758,7 +759,7 @@ Name|Description
 
 
 
-## class ArgoWorkflow  <a id="cdk8s-argoworkflow-argoworkflow"></a>
+## class ArgoWorkflowClusterWorkflowTemplate  <a id="cdk8s-argoworkflow-argoworkflowclusterworkflowtemplate"></a>
 
 
 
@@ -771,7 +772,7 @@ __Extends__: [ApiObject](#cdk8s-apiobject)
 
 
 ```ts
-new ArgoWorkflow(scope: Construct, name: string, props: ClusterWorkflowTemplate)
+new ArgoWorkflowClusterWorkflowTemplate(scope: Construct, name: string, props: ClusterWorkflowTemplate)
 ```
 
 * **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
@@ -794,7 +795,7 @@ Name | Type | Description
 ### Methods
 
 
-#### *static* manifest(props) <a id="cdk8s-argoworkflow-argoworkflow-manifest"></a>
+#### *static* manifest(props) <a id="cdk8s-argoworkflow-argoworkflowclusterworkflowtemplate-manifest"></a>
 
 
 
@@ -807,6 +808,59 @@ static manifest(props: ClusterWorkflowTemplate): any
   * **spec** (<code>[WorkflowTemplateSpec](#cdk8s-argoworkflow-workflowtemplatespec)</code>)  *No description* 
   * **apiVersion** (<code>string</code>)  *No description* __*Optional*__
   * **kind** (<code>string</code>)  *No description* __*Optional*__
+
+__Returns__:
+* <code>any</code>
+
+
+
+## class ArgoWorkflowCronWorkflow  <a id="cdk8s-argoworkflow-argoworkflowcronworkflow"></a>
+
+
+
+__Implements__: [IConstruct](#constructs-iconstruct)
+__Extends__: [ApiObject](#cdk8s-apiobject)
+
+### Initializer
+
+
+
+
+```ts
+new ArgoWorkflowCronWorkflow(scope: Construct, name: string, props: CronWorkflow)
+```
+
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
+* **name** (<code>string</code>)  *No description*
+* **props** (<code>[CronWorkflow](#cdk8s-argoworkflow-cronworkflow)</code>)  *No description*
+  * **metadata** (<code>[k8s.ObjectMeta](#cdk8s-argoworkflow-k8s-objectmeta)</code>)  *No description* 
+  * **spec** (<code>[CronWorkflowSpec](#cdk8s-argoworkflow-cronworkflowspec)</code>)  *No description* 
+  * **status** (<code>[CronWorkflowStatus](#cdk8s-argoworkflow-cronworkflowstatus)</code>)  *No description* __*Optional*__
+
+
+
+### Properties
+
+
+Name | Type | Description 
+-----|------|-------------
+*static* **GVK** | <code>[GroupVersionKind](#cdk8s-groupversionkind)</code> | <span></span>
+
+### Methods
+
+
+#### *static* manifest(props) <a id="cdk8s-argoworkflow-argoworkflowcronworkflow-manifest"></a>
+
+
+
+```ts
+static manifest(props: CronWorkflow): any
+```
+
+* **props** (<code>[CronWorkflow](#cdk8s-argoworkflow-cronworkflow)</code>)  *No description*
+  * **metadata** (<code>[k8s.ObjectMeta](#cdk8s-argoworkflow-k8s-objectmeta)</code>)  *No description* 
+  * **spec** (<code>[CronWorkflowSpec](#cdk8s-argoworkflow-cronworkflowspec)</code>)  *No description* 
+  * **status** (<code>[CronWorkflowStatus](#cdk8s-argoworkflow-cronworkflowstatus)</code>)  *No description* __*Optional*__
 
 __Returns__:
 * <code>any</code>
@@ -6490,8 +6544,6 @@ Name | Type | Description
 -----|------|-------------
 **metadata** | <code>[k8s.ObjectMeta](#cdk8s-argoworkflow-k8s-objectmeta)</code> | <span></span>
 **spec** | <code>[CronWorkflowSpec](#cdk8s-argoworkflow-cronworkflowspec)</code> | <span></span>
-**apiVersion**? | <code>string</code> | __*Optional*__
-**kind**? | <code>string</code> | __*Optional*__
 **status**? | <code>[CronWorkflowStatus](#cdk8s-argoworkflow-cronworkflowstatus)</code> | __*Optional*__
 
 

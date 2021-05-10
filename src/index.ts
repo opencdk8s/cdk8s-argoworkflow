@@ -209,8 +209,6 @@ export interface CreateS3BucketOptions {
 }
 
 export interface CronWorkflow {
-  readonly apiVersion?: string;
-  readonly kind?: string;
   readonly metadata: k8s.ObjectMeta;
   readonly spec: CronWorkflowSpec;
   readonly status?: CronWorkflowStatus;
@@ -1023,7 +1021,7 @@ export interface WorkflowWatchEvent {
 export interface ZipStrategy {
 }
 
-export class ArgoWorkflow extends ApiObject {
+export class ArgoWorkflowClusterWorkflowTemplate extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'argoproj.io/v1alpha1',
     kind: 'ClusterWorkflowTemplate',
@@ -1031,12 +1029,31 @@ export class ArgoWorkflow extends ApiObject {
 
   public static manifest(props: ClusterWorkflowTemplate): any {
     return {
-      ...ArgoWorkflow.GVK,
+      ...ArgoWorkflowClusterWorkflowTemplate.GVK,
       ...props,
     };
   }
 
   constructor(scope: Construct, name: string, props: ClusterWorkflowTemplate) {
-    super(scope, name, ArgoWorkflow.manifest(props));
+    super(scope, name, ArgoWorkflowClusterWorkflowTemplate.manifest(props));
   }
+}
+
+export class ArgoWorkflowCronWorkflow extends ApiObject {
+  public static readonly GVK: GroupVersionKind = {
+    apiVersion: 'argoproj.io/v1alpha1',
+    kind: 'CronWorkflow',
+  }
+
+  public static manifest(props: CronWorkflow): any {
+    return {
+      ...ArgoWorkflowCronWorkflow.GVK,
+      ...props,
+    };
+  }
+
+  constructor(scope: Construct, name: string, props: CronWorkflow) {
+    super(scope, name, ArgoWorkflowCronWorkflow.manifest(props));
+  }
+
 }
