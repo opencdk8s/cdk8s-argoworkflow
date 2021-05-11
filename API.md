@@ -7932,7 +7932,7 @@ Name | Type | Description
 **tolerations**? | <code>Array<[k8s.Toleration](#opencdk8s-cdk8s-argoworkflow-resources-k8s-toleration)></code> | __*Optional*__
 **ttlStrategy**? | <code>[TTLStrategy](#opencdk8s-cdk8s-argoworkflow-resources-ttlstrategy)</code> | __*Optional*__
 **volumeClaimGC**? | <code>[VolumeClaimGC](#opencdk8s-cdk8s-argoworkflow-resources-volumeclaimgc)</code> | __*Optional*__
-**volumeClaimTemplates**? | <code>Array<[k8s.PersistentVolumeClaimSpec](#opencdk8s-cdk8s-argoworkflow-resources-k8s-persistentvolumeclaimspec)></code> | __*Optional*__
+**volumeClaimTemplates**? | <code>Array<[k8s.KubePersistentVolumeClaimProps](#opencdk8s-cdk8s-argoworkflow-resources-k8s-kubepersistentvolumeclaimprops)></code> | __*Optional*__
 **volumes**? | <code>Array<[k8s.Volume](#opencdk8s-cdk8s-argoworkflow-resources-k8s-volume)></code> | __*Optional*__
 **workflowTemplateRef**? | <code>[WorkflowTemplateRef](#opencdk8s-cdk8s-argoworkflow-resources-workflowtemplateref)</code> | __*Optional*__
 

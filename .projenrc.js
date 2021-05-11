@@ -8,7 +8,7 @@ const project = new ConstructLibraryCdk8s({
   jsiiFqn: 'projen.ConstructLibraryCdk8s',
   name: '@opencdk8s/cdk8s-argoworkflow-resources',
   repositoryUrl: 'https://github.com/opencdk8s/cdk8s-argoworkflow-resources.git',
-  npmAccess: 'public', 
+  npmAccess: 'public',
   projenVersion: '0.17.71',
   python: {
     distName: 'cdk8s-argoworkflow-resources',

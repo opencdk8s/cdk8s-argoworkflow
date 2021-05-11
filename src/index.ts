@@ -861,7 +861,7 @@ export interface WorkflowSpec {
   readonly tolerations?: k8s.Toleration[];
   readonly ttlStrategy?: TTLStrategy;
   readonly volumeClaimGC?: VolumeClaimGC;
-  readonly volumeClaimTemplates?: k8s.PersistentVolumeClaimSpec[];
+  readonly volumeClaimTemplates?: k8s.KubePersistentVolumeClaimProps[];
   readonly volumes?: k8s.Volume[];
   readonly workflowTemplateRef?: WorkflowTemplateRef;
 }
