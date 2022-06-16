@@ -1032,7 +1032,7 @@ export class ArgoWorkflowClusterWorkflowTemplate extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'argoproj.io/v1alpha1',
     kind: 'ClusterWorkflowTemplate',
-  }
+  };
 
   public static manifest(props: ClusterWorkflowTemplate): any {
     return {
@@ -1050,7 +1050,7 @@ export class ArgoWorkflowWorkflowTemplate extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'argoproj.io/v1alpha1',
     kind: 'WorkflowTemplate',
-  }
+  };
 
   public static manifest(props: WorkflowTemplate): any {
     return {
@@ -1069,7 +1069,7 @@ export class ArgoWorkflowCronWorkflow extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'argoproj.io/v1alpha1',
     kind: 'CronWorkflow',
-  }
+  };
 
   public static manifest(props: CronWorkflow): any {
     return {

@@ -6,20 +6,17 @@
     },
     {
       "name": "@types/node",
-      "version": "^10.17.0",
+      "version": "^14",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
+      "version": "^5",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "type": "build"
-    },
-    {
-      "name": "cdk8s-plus-17",
-      "version": "1.0.0-beta.11",
+      "version": "^5",
       "type": "build"
     },
     {
@@ -29,21 +26,7 @@
     },
     {
       "name": "constructs",
-      "version": "^3.3.71",
-      "type": "build"
-    },
-    {
-      "name": "constructs",
-      "version": "3.2.34",
-      "type": "build"
-    },
-    {
-      "name": "constructs",
-      "version": "3.3.71",
-      "type": "build"
-    },
-    {
-      "name": "eslint",
+      "version": "3.3.196",
       "type": "build"
     },
     {
@@ -59,12 +42,18 @@
       "type": "build"
     },
     {
-      "name": "jest",
+      "name": "eslint",
+      "version": "^8",
       "type": "build"
     },
     {
       "name": "jest-junit",
-      "version": "^12",
+      "version": "^13",
+      "type": "build"
+    },
+    {
+      "name": "jest",
+      "version": "^27",
       "type": "build"
     },
     {
@@ -88,8 +77,12 @@
       "type": "build"
     },
     {
+      "name": "npm-check-updates",
+      "version": "^12",
+      "type": "build"
+    },
+    {
       "name": "projen",
-      "version": "^0.17.90",
       "type": "build"
     },
     {
@@ -99,16 +92,12 @@
     },
     {
       "name": "ts-jest",
+      "version": "^27",
       "type": "build"
     },
     {
       "name": "typescript",
       "type": "build"
-    },
-    {
-      "name": "cdk8s-plus-17",
-      "version": "^1.0.0-beta.11",
-      "type": "peer"
     },
     {
       "name": "cdk8s",
@@ -117,12 +106,7 @@
     },
     {
       "name": "constructs",
-      "version": "^3.2.34",
-      "type": "peer"
-    },
-    {
-      "name": "constructs",
-      "version": "^3.3.71",
+      "version": "^3.3.196",
       "type": "peer"
     }
   ],

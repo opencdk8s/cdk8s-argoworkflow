@@ -1,4 +1,4 @@
-const { ConstructLibraryCdk8s } = require('projen');
+const { ConstructLibraryCdk8s } = require('projen/lib/cdk8s');
 
 const project = new ConstructLibraryCdk8s({
   author: 'Gagan Singh',
@@ -23,7 +23,6 @@ const project = new ConstructLibraryCdk8s({
   dependabot: false,
   gitignore: ['test/'],
   pullRequestTemplate: false,
-  releaseBranches: ['main'],
   codeCov: true,
   clobber: false,
   readme: true,
@@ -84,7 +83,6 @@ const project = new ConstructLibraryCdk8s({
   // antitamper: true,                                                          /* Checks that after build there are no modified files on git. */
   // artifactsDirectory: 'dist',                                                /* A directory which will contain artifacts to be published to npm. */
   // buildWorkflow: undefined,                                                  /* Define a GitHub workflow for building PRs. */
-  // codeCov: false,                                                            /* Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret. */
   // codeCovTokenSecret: undefined,                                             /* Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. */
   // copyrightOwner: undefined,                                                 /* License copyright owner. */
   // copyrightPeriod: undefined,                                                /* The copyright years to put in the LICENSE file. */
