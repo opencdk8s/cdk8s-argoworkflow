@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Workflow 1`] = `
+Array [
+  Object {
+    "apiVersion": "argoproj.io/v1alpha1",
+    "kind": "WorkflowTemplate",
+    "metadata": Object {
+      "name": "test",
+    },
+    "spec": Object {
+      "templates": Array [
+        Object {
+          "container": Object {
+            "args": Array [
+              "test",
+            ],
+            "command": Array [
+              "test",
+            ],
+            "image": "test",
+            "name": "test",
+          },
+          "name": "test",
+        },
+      ],
+    },
+  },
+]
+`;

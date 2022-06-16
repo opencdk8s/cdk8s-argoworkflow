@@ -6,6 +6,7 @@ Name|Description
 ----|-----------
 [ArgoWorkflowClusterWorkflowTemplate](#opencdk8s-cdk8s-argoworkflow-resources-argoworkflowclusterworkflowtemplate)|*No description*
 [ArgoWorkflowCronWorkflow](#opencdk8s-cdk8s-argoworkflow-resources-argoworkflowcronworkflow)|*No description*
+[ArgoWorkflowWorkflowTemplate](#opencdk8s-cdk8s-argoworkflow-resources-argoworkflowworkflowtemplate)|*No description*
 [k8s.IntOrString](#opencdk8s-cdk8s-argoworkflow-resources-k8s-intorstring)|*No description*
 [k8s.KubeApiService](#opencdk8s-cdk8s-argoworkflow-resources-k8s-kubeapiservice)|APIService represents a server for a particular GroupVersion.
 [k8s.KubeApiServiceList](#opencdk8s-cdk8s-argoworkflow-resources-k8s-kubeapiservicelist)|APIServiceList is a list of APIService objects.
@@ -861,6 +862,61 @@ static manifest(props: CronWorkflow): any
   * **metadata** (<code>[k8s.ObjectMeta](#opencdk8s-cdk8s-argoworkflow-resources-k8s-objectmeta)</code>)  *No description* 
   * **spec** (<code>[CronWorkflowSpec](#opencdk8s-cdk8s-argoworkflow-resources-cronworkflowspec)</code>)  *No description* 
   * **status** (<code>[CronWorkflowStatus](#opencdk8s-cdk8s-argoworkflow-resources-cronworkflowstatus)</code>)  *No description* __*Optional*__
+
+__Returns__:
+* <code>any</code>
+
+
+
+## class ArgoWorkflowWorkflowTemplate  <a id="opencdk8s-cdk8s-argoworkflow-resources-argoworkflowworkflowtemplate"></a>
+
+
+
+__Implements__: [IConstruct](#constructs-iconstruct)
+__Extends__: [ApiObject](#cdk8s-apiobject)
+
+### Initializer
+
+
+
+
+```ts
+new ArgoWorkflowWorkflowTemplate(scope: Construct, name: string, props: WorkflowTemplate)
+```
+
+* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
+* **name** (<code>string</code>)  *No description*
+* **props** (<code>[WorkflowTemplate](#opencdk8s-cdk8s-argoworkflow-resources-workflowtemplate)</code>)  *No description*
+  * **metadata** (<code>[k8s.ObjectMeta](#opencdk8s-cdk8s-argoworkflow-resources-k8s-objectmeta)</code>)  *No description* 
+  * **spec** (<code>[WorkflowTemplateSpec](#opencdk8s-cdk8s-argoworkflow-resources-workflowtemplatespec)</code>)  *No description* 
+  * **apiVersion** (<code>string</code>)  *No description* __*Optional*__
+  * **kind** (<code>string</code>)  *No description* __*Optional*__
+
+
+
+### Properties
+
+
+Name | Type | Description 
+-----|------|-------------
+*static* **GVK** | <code>[GroupVersionKind](#cdk8s-groupversionkind)</code> | <span></span>
+
+### Methods
+
+
+#### *static* manifest(props) <a id="opencdk8s-cdk8s-argoworkflow-resources-argoworkflowworkflowtemplate-manifest"></a>
+
+
+
+```ts
+static manifest(props: WorkflowTemplate): any
+```
+
+* **props** (<code>[WorkflowTemplate](#opencdk8s-cdk8s-argoworkflow-resources-workflowtemplate)</code>)  *No description*
+  * **metadata** (<code>[k8s.ObjectMeta](#opencdk8s-cdk8s-argoworkflow-resources-k8s-objectmeta)</code>)  *No description* 
+  * **spec** (<code>[WorkflowTemplateSpec](#opencdk8s-cdk8s-argoworkflow-resources-workflowtemplatespec)</code>)  *No description* 
+  * **apiVersion** (<code>string</code>)  *No description* __*Optional*__
+  * **kind** (<code>string</code>)  *No description* __*Optional*__
 
 __Returns__:
 * <code>any</code>

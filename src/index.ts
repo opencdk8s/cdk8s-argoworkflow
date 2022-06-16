@@ -132,6 +132,13 @@ export interface ClusterWorkflowTemplate {
   readonly spec: WorkflowTemplateSpec;
 }
 
+export interface WorkflowTemplate {
+  readonly apiVersion?: string;
+  readonly kind?: string;
+  readonly metadata: k8s.ObjectMeta;
+  readonly spec: WorkflowTemplateSpec;
+}
+
 export interface ClusterWorkflowTemplateDeleteResponse {
 }
 
@@ -1038,6 +1045,25 @@ export class ArgoWorkflowClusterWorkflowTemplate extends ApiObject {
     super(scope, name, ArgoWorkflowClusterWorkflowTemplate.manifest(props));
   }
 }
+
+export class ArgoWorkflowWorkflowTemplate extends ApiObject {
+  public static readonly GVK: GroupVersionKind = {
+    apiVersion: 'argoproj.io/v1alpha1',
+    kind: 'WorkflowTemplate',
+  }
+
+  public static manifest(props: WorkflowTemplate): any {
+    return {
+      ...ArgoWorkflowWorkflowTemplate.GVK,
+      ...props,
+    };
+  }
+
+  constructor(scope: Construct, name: string, props: WorkflowTemplate) {
+    super(scope, name, ArgoWorkflowWorkflowTemplate.manifest(props));
+  }
+}
+
 
 export class ArgoWorkflowCronWorkflow extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
