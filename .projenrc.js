@@ -3,7 +3,8 @@ const { ConstructLibraryCdk8s } = require('projen/lib/cdk8s');
 const project = new ConstructLibraryCdk8s({
   author: 'Gagan Singh',
   authorAddress: 'gaganpreet.singh@smallcase.com',
-  cdk8sVersion: '1.0.0-beta.11',
+  cdk8sVersion: '2.2.74',
+  constructsVersion: '10.0.5',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.ConstructLibraryCdk8s',
   name: '@opencdk8s/cdk8s-argoworkflow-resources',
@@ -14,10 +15,8 @@ const project = new ConstructLibraryCdk8s({
     module: 'cdk8s_argoworkflow_resources',
   },
   peerDeps: [
-    'constructs@^3.3.71',
   ],
   devDeps: [
-    'constructs@^3.3.71',
   ],
   releaseEveryCommit: true,
   dependabot: false,
@@ -55,7 +54,7 @@ const project = new ConstructLibraryCdk8s({
   // bin: undefined,                                                            /* Binary programs vended with your module. */
   // bundledDeps: undefined,                                                    /* List of dependencies to bundle into this module. */
   // deps: [],                                                                  /* Runtime dependencies of this module. */
-  // description: undefined,                                                    /* The description is just a string that helps people understand the purpose of the package. */
+  // description: undefined,                                                 /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],                                                               /* Build dependencies for this module. */
   // entrypoint: 'lib/index.js',                                                /* Module entrypoint (`main` in `package.json`). */
   // homepage: undefined,                                                       /* Package's Homepage / Website. */

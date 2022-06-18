@@ -764,7 +764,7 @@ Name|Description
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Extends__: [ApiObject](#cdk8s-apiobject)
 
 ### Initializer
@@ -819,7 +819,7 @@ __Returns__:
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Extends__: [ApiObject](#cdk8s-apiobject)
 
 ### Initializer
@@ -872,7 +872,7 @@ __Returns__:
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Extends__: [ApiObject](#cdk8s-apiobject)
 
 ### Initializer
@@ -967,7 +967,7 @@ APIService represents a server for a particular GroupVersion.
 
 Name must be "version.group".
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -994,7 +994,7 @@ new k8s.KubeApiService(scope: Construct, id: string, props?: KubeApiServiceProps
 
 APIServiceList is a list of APIService objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1021,7 +1021,7 @@ new k8s.KubeApiServiceList(scope: Construct, id: string, props: KubeApiServiceLi
 
 APIServiceList is a list of APIService objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1050,7 +1050,7 @@ APIService represents a server for a particular GroupVersion.
 
 Name must be "version.group".
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1077,7 +1077,7 @@ new k8s.KubeApiServiceV1Beta1(scope: Construct, id: string, props?: KubeApiServi
 
 AuditSinkList is a list of AuditSink items.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1104,7 +1104,7 @@ new k8s.KubeAuditSinkListV1Alpha1(scope: Construct, id: string, props: KubeAudit
 
 AuditSink represents a cluster level audit sink.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1133,7 +1133,7 @@ Binding ties one object to another;
 
 for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1160,7 +1160,7 @@ new k8s.KubeBinding(scope: Construct, id: string, props: KubeBindingProps)
 
 
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1187,7 +1187,7 @@ new k8s.KubeCertificateSigningRequestListV1Beta1(scope: Construct, id: string, p
 
 Describes a certificate signing request.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1214,7 +1214,7 @@ new k8s.KubeCertificateSigningRequestV1Beta1(scope: Construct, id: string, props
 
 ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1244,7 +1244,7 @@ ClusterRoleBinding references a ClusterRole, but not contain it.
 
 It can reference a ClusterRole in the global namespace, and adds who information via Subject.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1272,7 +1272,7 @@ new k8s.KubeClusterRoleBinding(scope: Construct, id: string, props: KubeClusterR
 
 ClusterRoleBindingList is a collection of ClusterRoleBindings.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1301,7 +1301,7 @@ ClusterRoleBindingList is a collection of ClusterRoleBindings.
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoleBindings, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1330,7 +1330,7 @@ ClusterRoleBindingList is a collection of ClusterRoleBindings.
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoleBindingList, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1359,7 +1359,7 @@ ClusterRoleBinding references a ClusterRole, but not contain it.
 
 It can reference a ClusterRole in the global namespace, and adds who information via Subject. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoleBinding, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1389,7 +1389,7 @@ ClusterRoleBinding references a ClusterRole, but not contain it.
 
 It can reference a ClusterRole in the global namespace, and adds who information via Subject. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoleBinding, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1417,7 +1417,7 @@ new k8s.KubeClusterRoleBindingV1Beta1(scope: Construct, id: string, props: KubeC
 
 ClusterRoleList is a collection of ClusterRoles.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1446,7 +1446,7 @@ ClusterRoleList is a collection of ClusterRoles.
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoles, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1475,7 +1475,7 @@ ClusterRoleList is a collection of ClusterRoles.
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoles, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1504,7 +1504,7 @@ ClusterRole is a cluster level, logical grouping of PolicyRules that can be refe
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRole, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1534,7 +1534,7 @@ ClusterRole is a cluster level, logical grouping of PolicyRules that can be refe
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRole, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1562,7 +1562,7 @@ new k8s.KubeClusterRoleV1Beta1(scope: Construct, id: string, props?: KubeCluster
 
 ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1589,7 +1589,7 @@ new k8s.KubeComponentStatus(scope: Construct, id: string, props?: KubeComponentS
 
 Status of all the conditions for the component as a list of ComponentStatus objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1616,7 +1616,7 @@ new k8s.KubeComponentStatusList(scope: Construct, id: string, props: KubeCompone
 
 ConfigMap holds configuration data for pods to consume.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1644,7 +1644,7 @@ new k8s.KubeConfigMap(scope: Construct, id: string, props?: KubeConfigMapProps)
 
 ConfigMapList is a resource containing a list of ConfigMap objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1673,7 +1673,7 @@ ControllerRevision implements an immutable snapshot of state data.
 
 Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1701,7 +1701,7 @@ new k8s.KubeControllerRevision(scope: Construct, id: string, props: KubeControll
 
 ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1728,7 +1728,7 @@ new k8s.KubeControllerRevisionList(scope: Construct, id: string, props: KubeCont
 
 ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1755,7 +1755,7 @@ new k8s.KubeControllerRevisionListV1Beta1(scope: Construct, id: string, props: K
 
 ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1784,7 +1784,7 @@ DEPRECATED - This group version of ControllerRevision is deprecated by apps/v1be
 
 See the release notes for more information. ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1814,7 +1814,7 @@ DEPRECATED - This group version of ControllerRevision is deprecated by apps/v1/C
 
 See the release notes for more information. ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1842,7 +1842,7 @@ new k8s.KubeControllerRevisionV1Beta2(scope: Construct, id: string, props: KubeC
 
 CronJobList is a collection of cron jobs.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1869,7 +1869,7 @@ new k8s.KubeCronJobListV1Beta1(scope: Construct, id: string, props: KubeCronJobL
 
 CronJobList is a collection of cron jobs.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1896,7 +1896,7 @@ new k8s.KubeCronJobListV2Alpha1(scope: Construct, id: string, props: KubeCronJob
 
 CronJob represents the configuration of a single cron job.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1923,7 +1923,7 @@ new k8s.KubeCronJobV1Beta1(scope: Construct, id: string, props?: KubeCronJobV1Be
 
 CronJob represents the configuration of a single cron job.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1950,7 +1950,7 @@ new k8s.KubeCronJobV2Alpha1(scope: Construct, id: string, props?: KubeCronJobV2A
 
 CSIDriverList is a collection of CSIDriver objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -1979,7 +1979,7 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
 
 CSI drivers do not need to create the CSIDriver object directly. Instead they may use the cluster-driver-registrar sidecar container. When deployed with a CSI driver it automatically creates a CSIDriver object representing the driver. Kubernetes attach detach controller uses this object to determine whether attach is required. Kubelet uses this object to determine whether pod information needs to be passed on mount. CSIDriver objects are non-namespaced.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2008,7 +2008,7 @@ CSINode holds information about all CSI drivers installed on a node.
 
 CSI drivers do not need to create the CSINode object directly. As long as they use the node-driver-registrar sidecar container, the kubelet will automatically populate the CSINode object for the CSI driver as part of kubelet plugin registration. CSINode has the same name as a node. If the object is missing, it means either there are no CSI Drivers available on the node, or the Kubelet version is low enough that it doesn't create this object. CSINode has an OwnerReference that points to the corresponding node object.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2035,7 +2035,7 @@ new k8s.KubeCsiNode(scope: Construct, id: string, props: KubeCsiNodeProps)
 
 CSINodeList is a collection of CSINode objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2062,7 +2062,7 @@ new k8s.KubeCsiNodeList(scope: Construct, id: string, props: KubeCsiNodeListProp
 
 CSINodeList is a collection of CSINode objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2091,7 +2091,7 @@ DEPRECATED - This group version of CSINode is deprecated by storage/v1/CSINode.
 
 See the release notes for more information. CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need to create the CSINode object directly. As long as they use the node-driver-registrar sidecar container, the kubelet will automatically populate the CSINode object for the CSI driver as part of kubelet plugin registration. CSINode has the same name as a node. If the object is missing, it means either there are no CSI Drivers available on the node, or the Kubelet version is low enough that it doesn't create this object. CSINode has an OwnerReference that points to the corresponding node object.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2120,7 +2120,7 @@ CustomResourceDefinition represents a resource that should be exposed on the API
 
 Its name MUST be in the format <.spec.name>.<.spec.group>.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2147,7 +2147,7 @@ new k8s.KubeCustomResourceDefinition(scope: Construct, id: string, props: KubeCu
 
 CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2174,7 +2174,7 @@ new k8s.KubeCustomResourceDefinitionList(scope: Construct, id: string, props: Ku
 
 CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2203,7 +2203,7 @@ CustomResourceDefinition represents a resource that should be exposed on the API
 
 Its name MUST be in the format <.spec.name>.<.spec.group>. Deprecated in v1.16, planned for removal in v1.19. Use apiextensions.k8s.io/v1 CustomResourceDefinition instead.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2230,7 +2230,7 @@ new k8s.KubeCustomResourceDefinitionV1Beta1(scope: Construct, id: string, props:
 
 DaemonSet represents the configuration of a daemon set.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2257,7 +2257,7 @@ new k8s.KubeDaemonSet(scope: Construct, id: string, props?: KubeDaemonSetProps)
 
 DaemonSetList is a collection of daemon sets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2284,7 +2284,7 @@ new k8s.KubeDaemonSetList(scope: Construct, id: string, props: KubeDaemonSetList
 
 DaemonSetList is a collection of daemon sets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2311,7 +2311,7 @@ new k8s.KubeDaemonSetListV1Beta1(scope: Construct, id: string, props: KubeDaemon
 
 DaemonSetList is a collection of daemon sets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2340,7 +2340,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1beta2/Daemo
 
 See the release notes for more information. DaemonSet represents the configuration of a daemon set.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2369,7 +2369,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1/DaemonSet.
 
 See the release notes for more information. DaemonSet represents the configuration of a daemon set.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2396,7 +2396,7 @@ new k8s.KubeDaemonSetV1Beta2(scope: Construct, id: string, props?: KubeDaemonSet
 
 Deployment enables declarative updates for Pods and ReplicaSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2423,7 +2423,7 @@ new k8s.KubeDeployment(scope: Construct, id: string, props?: KubeDeploymentProps
 
 DeploymentList is a list of Deployments.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2450,7 +2450,7 @@ new k8s.KubeDeploymentList(scope: Construct, id: string, props: KubeDeploymentLi
 
 DeploymentList is a list of Deployments.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2477,7 +2477,7 @@ new k8s.KubeDeploymentListV1Beta1(scope: Construct, id: string, props: KubeDeplo
 
 DeploymentList is a list of Deployments.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2506,7 +2506,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 
 See the release notes for more information. Deployment enables declarative updates for Pods and ReplicaSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2535,7 +2535,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1/Deploymen
 
 See the release notes for more information. Deployment enables declarative updates for Pods and ReplicaSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2562,7 +2562,7 @@ new k8s.KubeDeploymentV1Beta2(scope: Construct, id: string, props?: KubeDeployme
 
 EndpointSliceList represents a list of endpoint slices.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2591,7 +2591,7 @@ EndpointSlice represents a subset of the endpoints that implement a service.
 
 For a given service there may be multiple EndpointSlice objects, selected by labels, which must be joined to produce the full set of endpoints.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2633,7 +2633,7 @@ Subsets: [
   },
 ]
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2660,7 +2660,7 @@ new k8s.KubeEndpoints(scope: Construct, id: string, props?: KubeEndpointsProps)
 
 EndpointsList is a list of endpoints.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2687,7 +2687,7 @@ new k8s.KubeEndpointsList(scope: Construct, id: string, props: KubeEndpointsList
 
 Event is a report of an event somewhere in the cluster.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2727,7 +2727,7 @@ new k8s.KubeEvent(scope: Construct, id: string, props: KubeEventProps)
 
 EventList is a list of events.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2754,7 +2754,7 @@ new k8s.KubeEventList(scope: Construct, id: string, props: KubeEventListProps)
 
 EventList is a list of Event objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2783,7 +2783,7 @@ Event is a report of an event somewhere in the cluster.
 
 It generally denotes some state change in the system.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2825,7 +2825,7 @@ Eviction evicts a pod from its node subject to certain policies and safety const
 
 This is a subresource of Pod.  A request to cause such an eviction is created by POSTing to .../pods/<pod name>/evictions.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2852,7 +2852,7 @@ new k8s.KubeEvictionV1Beta1(scope: Construct, id: string, props?: KubeEvictionV1
 
 FlowSchemaList is a list of FlowSchema objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2881,7 +2881,7 @@ FlowSchema defines the schema of a group of flows.
 
 Note that a flow is made up of a set of inbound API requests with similar attributes and is identified by a pair of strings: the name of the FlowSchema and a "flow distinguisher".
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2908,7 +2908,7 @@ new k8s.KubeFlowSchemaV1Alpha1(scope: Construct, id: string, props?: KubeFlowSch
 
 configuration of a horizontal pod autoscaler.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2935,7 +2935,7 @@ new k8s.KubeHorizontalPodAutoscaler(scope: Construct, id: string, props?: KubeHo
 
 list of horizontal pod autoscaler objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2962,7 +2962,7 @@ new k8s.KubeHorizontalPodAutoscalerList(scope: Construct, id: string, props: Kub
 
 HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -2989,7 +2989,7 @@ new k8s.KubeHorizontalPodAutoscalerListV2Beta1(scope: Construct, id: string, pro
 
 HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3016,7 +3016,7 @@ new k8s.KubeHorizontalPodAutoscalerListV2Beta2(scope: Construct, id: string, pro
 
 HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3043,7 +3043,7 @@ new k8s.KubeHorizontalPodAutoscalerV2Beta1(scope: Construct, id: string, props?:
 
 HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3070,7 +3070,7 @@ new k8s.KubeHorizontalPodAutoscalerV2Beta2(scope: Construct, id: string, props?:
 
 IngressList is a collection of Ingress.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3099,7 +3099,7 @@ Ingress is a collection of rules that allow inbound connections to reach the end
 
 An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3126,7 +3126,7 @@ new k8s.KubeIngressV1Beta1(scope: Construct, id: string, props?: KubeIngressV1Be
 
 Job represents the configuration of a single job.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3153,7 +3153,7 @@ new k8s.KubeJob(scope: Construct, id: string, props?: KubeJobProps)
 
 JobList is a collection of jobs.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3180,7 +3180,7 @@ new k8s.KubeJobList(scope: Construct, id: string, props: KubeJobListProps)
 
 Lease defines a lease concept.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3207,7 +3207,7 @@ new k8s.KubeLease(scope: Construct, id: string, props?: KubeLeaseProps)
 
 LeaseList is a list of Lease objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3234,7 +3234,7 @@ new k8s.KubeLeaseList(scope: Construct, id: string, props: KubeLeaseListProps)
 
 LeaseList is a list of Lease objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3261,7 +3261,7 @@ new k8s.KubeLeaseListV1Beta1(scope: Construct, id: string, props: KubeLeaseListV
 
 Lease defines a lease concept.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3288,7 +3288,7 @@ new k8s.KubeLeaseV1Beta1(scope: Construct, id: string, props?: KubeLeaseV1Beta1P
 
 LimitRange sets resource usage limits for each kind of resource in a Namespace.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3315,7 +3315,7 @@ new k8s.KubeLimitRange(scope: Construct, id: string, props?: KubeLimitRangeProps
 
 LimitRangeList is a list of LimitRange items.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3344,7 +3344,7 @@ LocalSubjectAccessReview checks whether or not a user or group can perform an ac
 
 Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3373,7 +3373,7 @@ LocalSubjectAccessReview checks whether or not a user or group can perform an ac
 
 Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3400,7 +3400,7 @@ new k8s.KubeLocalSubjectAccessReviewV1Beta1(scope: Construct, id: string, props:
 
 MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3427,7 +3427,7 @@ new k8s.KubeMutatingWebhookConfiguration(scope: Construct, id: string, props?: K
 
 MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3454,7 +3454,7 @@ new k8s.KubeMutatingWebhookConfigurationList(scope: Construct, id: string, props
 
 MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3483,7 +3483,7 @@ MutatingWebhookConfiguration describes the configuration of and admission webhoo
 
 Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.k8s.io/v1 MutatingWebhookConfiguration instead.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3512,7 +3512,7 @@ Namespace provides a scope for Names.
 
 Use of multiple namespaces is optional.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3539,7 +3539,7 @@ new k8s.KubeNamespace(scope: Construct, id: string, props?: KubeNamespaceProps)
 
 NamespaceList is a list of Namespaces.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3566,7 +3566,7 @@ new k8s.KubeNamespaceList(scope: Construct, id: string, props: KubeNamespaceList
 
 NetworkPolicy describes what network traffic is allowed for a set of Pods.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3593,7 +3593,7 @@ new k8s.KubeNetworkPolicy(scope: Construct, id: string, props?: KubeNetworkPolic
 
 NetworkPolicyList is a list of NetworkPolicy objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3620,7 +3620,7 @@ new k8s.KubeNetworkPolicyList(scope: Construct, id: string, props: KubeNetworkPo
 
 DEPRECATED 1.9 - This group version of NetworkPolicyList is deprecated by networking/v1/NetworkPolicyList. Network Policy List is a list of NetworkPolicy objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3647,7 +3647,7 @@ new k8s.KubeNetworkPolicyListV1Beta1(scope: Construct, id: string, props: KubeNe
 
 DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking/v1/NetworkPolicy. NetworkPolicy describes what network traffic is allowed for a set of Pods.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3676,7 +3676,7 @@ Node is a worker node in Kubernetes.
 
 Each node will have a unique identifier in the cache (i.e. in etcd).
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3703,7 +3703,7 @@ new k8s.KubeNode(scope: Construct, id: string, props?: KubeNodeProps)
 
 NodeList is the whole list of all Nodes which have been registered with master.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3732,7 +3732,7 @@ PersistentVolume (PV) is a storage resource provisioned by an administrator.
 
 It is analogous to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3759,7 +3759,7 @@ new k8s.KubePersistentVolume(scope: Construct, id: string, props?: KubePersisten
 
 PersistentVolumeClaim is a user's request for and claim to a persistent volume.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3786,7 +3786,7 @@ new k8s.KubePersistentVolumeClaim(scope: Construct, id: string, props?: KubePers
 
 PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3813,7 +3813,7 @@ new k8s.KubePersistentVolumeClaimList(scope: Construct, id: string, props: KubeP
 
 PersistentVolumeList is a list of PersistentVolume items.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3842,7 +3842,7 @@ Pod is a collection of containers that can run on a host.
 
 This resource is created by clients and scheduled onto hosts.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3869,7 +3869,7 @@ new k8s.KubePod(scope: Construct, id: string, props?: KubePodProps)
 
 PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3896,7 +3896,7 @@ new k8s.KubePodDisruptionBudgetListV1Beta1(scope: Construct, id: string, props: 
 
 PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3923,7 +3923,7 @@ new k8s.KubePodDisruptionBudgetV1Beta1(scope: Construct, id: string, props?: Kub
 
 PodList is a list of Pods.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3950,7 +3950,7 @@ new k8s.KubePodList(scope: Construct, id: string, props: KubePodListProps)
 
 PodPresetList is a list of PodPreset objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -3977,7 +3977,7 @@ new k8s.KubePodPresetListV1Alpha1(scope: Construct, id: string, props: KubePodPr
 
 PodPreset is a policy resource that defines additional runtime requirements for a Pod.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4004,7 +4004,7 @@ new k8s.KubePodPresetV1Alpha1(scope: Construct, id: string, props?: KubePodPrese
 
 PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4031,7 +4031,7 @@ new k8s.KubePodSecurityPolicyListV1Beta1(scope: Construct, id: string, props: Ku
 
 PodSecurityPolicy governs the ability to make requests that affect the Security Context that will be applied to a pod and container.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4058,7 +4058,7 @@ new k8s.KubePodSecurityPolicyV1Beta1(scope: Construct, id: string, props?: KubeP
 
 PodTemplate describes a template for creating copies of a predefined pod.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4085,7 +4085,7 @@ new k8s.KubePodTemplate(scope: Construct, id: string, props?: KubePodTemplatePro
 
 PodTemplateList is a list of PodTemplates.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4114,7 +4114,7 @@ PriorityClass defines mapping from a priority class name to the priority integer
 
 The value can be any valid integer.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4144,7 +4144,7 @@ new k8s.KubePriorityClass(scope: Construct, id: string, props: KubePriorityClass
 
 PriorityClassList is a collection of priority classes.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4171,7 +4171,7 @@ new k8s.KubePriorityClassList(scope: Construct, id: string, props: KubePriorityC
 
 PriorityClassList is a collection of priority classes.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4198,7 +4198,7 @@ new k8s.KubePriorityClassListV1Alpha1(scope: Construct, id: string, props: KubeP
 
 PriorityClassList is a collection of priority classes.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4225,7 +4225,7 @@ new k8s.KubePriorityClassListV1Beta1(scope: Construct, id: string, props: KubePr
 
 DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s.io/v1/PriorityClass. PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4255,7 +4255,7 @@ new k8s.KubePriorityClassV1Alpha1(scope: Construct, id: string, props: KubePrior
 
 DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s.io/v1/PriorityClass. PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4285,7 +4285,7 @@ new k8s.KubePriorityClassV1Beta1(scope: Construct, id: string, props: KubePriori
 
 PriorityLevelConfigurationList is a list of PriorityLevelConfiguration objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4312,7 +4312,7 @@ new k8s.KubePriorityLevelConfigurationListV1Alpha1(scope: Construct, id: string,
 
 PriorityLevelConfiguration represents the configuration of a priority level.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4339,7 +4339,7 @@ new k8s.KubePriorityLevelConfigurationV1Alpha1(scope: Construct, id: string, pro
 
 ReplicaSet ensures that a specified number of pod replicas are running at any given time.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4366,7 +4366,7 @@ new k8s.KubeReplicaSet(scope: Construct, id: string, props?: KubeReplicaSetProps
 
 ReplicaSetList is a collection of ReplicaSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4393,7 +4393,7 @@ new k8s.KubeReplicaSetList(scope: Construct, id: string, props: KubeReplicaSetLi
 
 ReplicaSetList is a collection of ReplicaSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4420,7 +4420,7 @@ new k8s.KubeReplicaSetListV1Beta1(scope: Construct, id: string, props: KubeRepli
 
 ReplicaSetList is a collection of ReplicaSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4449,7 +4449,7 @@ DEPRECATED - This group version of ReplicaSet is deprecated by apps/v1beta2/Repl
 
 See the release notes for more information. ReplicaSet ensures that a specified number of pod replicas are running at any given time.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4478,7 +4478,7 @@ DEPRECATED - This group version of ReplicaSet is deprecated by apps/v1/ReplicaSe
 
 See the release notes for more information. ReplicaSet ensures that a specified number of pod replicas are running at any given time.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4505,7 +4505,7 @@ new k8s.KubeReplicaSetV1Beta2(scope: Construct, id: string, props?: KubeReplicaS
 
 ReplicationController represents the configuration of a replication controller.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4532,7 +4532,7 @@ new k8s.KubeReplicationController(scope: Construct, id: string, props?: KubeRepl
 
 ReplicationControllerList is a collection of replication controllers.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4559,7 +4559,7 @@ new k8s.KubeReplicationControllerList(scope: Construct, id: string, props: KubeR
 
 ResourceQuota sets aggregate quota restrictions enforced per namespace.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4586,7 +4586,7 @@ new k8s.KubeResourceQuota(scope: Construct, id: string, props?: KubeResourceQuot
 
 ResourceQuotaList is a list of ResourceQuota items.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4613,7 +4613,7 @@ new k8s.KubeResourceQuotaList(scope: Construct, id: string, props: KubeResourceQ
 
 Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4642,7 +4642,7 @@ RoleBinding references a role, but does not contain it.
 
 It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4670,7 +4670,7 @@ new k8s.KubeRoleBinding(scope: Construct, id: string, props: KubeRoleBindingProp
 
 RoleBindingList is a collection of RoleBindings.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4697,7 +4697,7 @@ new k8s.KubeRoleBindingList(scope: Construct, id: string, props: KubeRoleBinding
 
 RoleBindingList is a collection of RoleBindings Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleBindingList, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4724,7 +4724,7 @@ new k8s.KubeRoleBindingListV1Alpha1(scope: Construct, id: string, props: KubeRol
 
 RoleBindingList is a collection of RoleBindings Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleBindingList, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4753,7 +4753,7 @@ RoleBinding references a role, but does not contain it.
 
 It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleBinding, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4783,7 +4783,7 @@ RoleBinding references a role, but does not contain it.
 
 It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleBinding, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4811,7 +4811,7 @@ new k8s.KubeRoleBindingV1Beta1(scope: Construct, id: string, props: KubeRoleBind
 
 RoleList is a collection of Roles.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4840,7 +4840,7 @@ RoleList is a collection of Roles.
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleList, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4867,7 +4867,7 @@ new k8s.KubeRoleListV1Alpha1(scope: Construct, id: string, props: KubeRoleListV1
 
 RoleList is a collection of Roles Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 RoleList, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4896,7 +4896,7 @@ Role is a namespaced, logical grouping of PolicyRules that can be referenced as 
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 Role, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4925,7 +4925,7 @@ Role is a namespaced, logical grouping of PolicyRules that can be referenced as 
 
 Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 Role, and will no longer be served in v1.20.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4952,7 +4952,7 @@ new k8s.KubeRoleV1Beta1(scope: Construct, id: string, props?: KubeRoleV1Beta1Pro
 
 RuntimeClassList is a list of RuntimeClass objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -4979,7 +4979,7 @@ new k8s.KubeRuntimeClassListV1Alpha1(scope: Construct, id: string, props: KubeRu
 
 RuntimeClassList is a list of RuntimeClass objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5008,7 +5008,7 @@ RuntimeClass defines a class of container runtime supported in the cluster.
 
 The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are (currently) manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5037,7 +5037,7 @@ RuntimeClass defines a class of container runtime supported in the cluster.
 
 The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are (currently) manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5066,7 +5066,7 @@ new k8s.KubeRuntimeClassV1Beta1(scope: Construct, id: string, props: KubeRuntime
 
 Scale represents a scaling request for a resource.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5093,7 +5093,7 @@ new k8s.KubeScale(scope: Construct, id: string, props?: KubeScaleProps)
 
 represents a scaling request for a resource.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5120,7 +5120,7 @@ new k8s.KubeScaleV1Beta1(scope: Construct, id: string, props?: KubeScaleV1Beta1P
 
 Scale represents a scaling request for a resource.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5149,7 +5149,7 @@ Secret holds secret data of a certain type.
 
 The total bytes of the values in the Data field must be less than MaxSecretSize bytes.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5178,7 +5178,7 @@ new k8s.KubeSecret(scope: Construct, id: string, props?: KubeSecretProps)
 
 SecretList is a list of Secret.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5207,7 +5207,7 @@ SelfSubjectAccessReview checks whether or the current user can perform an action
 
 Not filling in a spec.namespace means "in all namespaces".  Self is a special case, because users should always be able to check whether they can perform an action
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5236,7 +5236,7 @@ SelfSubjectAccessReview checks whether or the current user can perform an action
 
 Not filling in a spec.namespace means "in all namespaces".  Self is a special case, because users should always be able to check whether they can perform an action
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5265,7 +5265,7 @@ SelfSubjectRulesReview enumerates the set of actions the current user can perfor
 
 The returned list of actions may be incomplete depending on the server's authorization mode, and any errors experienced during the evaluation. SelfSubjectRulesReview should be used by UIs to show/hide actions, or to quickly let an end user reason about their permissions. It should NOT Be used by external systems to drive authorization decisions as this raises confused deputy, cache lifetime/revocation, and correctness concerns. SubjectAccessReview, and LocalAccessReview are the correct way to defer authorization decisions to the API server.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5294,7 +5294,7 @@ SelfSubjectRulesReview enumerates the set of actions the current user can perfor
 
 The returned list of actions may be incomplete depending on the server's authorization mode, and any errors experienced during the evaluation. SelfSubjectRulesReview should be used by UIs to show/hide actions, or to quickly let an end user reason about their permissions. It should NOT Be used by external systems to drive authorization decisions as this raises confused deputy, cache lifetime/revocation, and correctness concerns. SubjectAccessReview, and LocalAccessReview are the correct way to defer authorization decisions to the API server.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5321,7 +5321,7 @@ new k8s.KubeSelfSubjectRulesReviewV1Beta1(scope: Construct, id: string, props: K
 
 Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer requests sent through the proxy.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5348,7 +5348,7 @@ new k8s.KubeService(scope: Construct, id: string, props?: KubeServiceProps)
 
 ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral systems, for an identity * a principal that can be authenticated and authorized * a set of secrets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5377,7 +5377,7 @@ new k8s.KubeServiceAccount(scope: Construct, id: string, props?: KubeServiceAcco
 
 ServiceAccountList is a list of ServiceAccount objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5404,7 +5404,7 @@ new k8s.KubeServiceAccountList(scope: Construct, id: string, props: KubeServiceA
 
 ServiceList holds a list of services.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5436,7 +5436,7 @@ Identities are defined as:
 - Storage: As many VolumeClaims as requested.
 The StatefulSet guarantees that a given network identity will always map to the same storage identity.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5463,7 +5463,7 @@ new k8s.KubeStatefulSet(scope: Construct, id: string, props?: KubeStatefulSetPro
 
 StatefulSetList is a collection of StatefulSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5490,7 +5490,7 @@ new k8s.KubeStatefulSetList(scope: Construct, id: string, props: KubeStatefulSet
 
 StatefulSetList is a collection of StatefulSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5517,7 +5517,7 @@ new k8s.KubeStatefulSetListV1Beta1(scope: Construct, id: string, props: KubeStat
 
 StatefulSetList is a collection of StatefulSets.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5549,7 +5549,7 @@ See the release notes for more information. StatefulSet represents a set of pods
 - Storage: As many VolumeClaims as requested.
 The StatefulSet guarantees that a given network identity will always map to the same storage identity.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5581,7 +5581,7 @@ See the release notes for more information. StatefulSet represents a set of pods
 - Storage: As many VolumeClaims as requested.
 The StatefulSet guarantees that a given network identity will always map to the same storage identity.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5608,7 +5608,7 @@ new k8s.KubeStatefulSetV1Beta2(scope: Construct, id: string, props?: KubeStatefu
 
 Status is a return value for calls that don't return other objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5640,7 +5640,7 @@ StorageClass describes the parameters for a class of storage for which Persisten
 
 StorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5673,7 +5673,7 @@ new k8s.KubeStorageClass(scope: Construct, id: string, props: KubeStorageClassPr
 
 StorageClassList is a collection of storage classes.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5700,7 +5700,7 @@ new k8s.KubeStorageClassList(scope: Construct, id: string, props: KubeStorageCla
 
 StorageClassList is a collection of storage classes.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5729,7 +5729,7 @@ StorageClass describes the parameters for a class of storage for which Persisten
 
 StorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5762,7 +5762,7 @@ new k8s.KubeStorageClassV1Beta1(scope: Construct, id: string, props: KubeStorage
 
 SubjectAccessReview checks whether or not a user or group can perform an action.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5789,7 +5789,7 @@ new k8s.KubeSubjectAccessReview(scope: Construct, id: string, props: KubeSubject
 
 SubjectAccessReview checks whether or not a user or group can perform an action.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5816,7 +5816,7 @@ new k8s.KubeSubjectAccessReviewV1Beta1(scope: Construct, id: string, props: Kube
 
 TokenRequest requests a token for a given service account.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5845,7 +5845,7 @@ TokenReview attempts to authenticate a token to a known user.
 
 Note: TokenReview requests may be cached by the webhook token authenticator plugin in the kube-apiserver.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5874,7 +5874,7 @@ TokenReview attempts to authenticate a token to a known user.
 
 Note: TokenReview requests may be cached by the webhook token authenticator plugin in the kube-apiserver.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5901,7 +5901,7 @@ new k8s.KubeTokenReviewV1Beta1(scope: Construct, id: string, props: KubeTokenRev
 
 ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5928,7 +5928,7 @@ new k8s.KubeValidatingWebhookConfiguration(scope: Construct, id: string, props?:
 
 ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5955,7 +5955,7 @@ new k8s.KubeValidatingWebhookConfigurationList(scope: Construct, id: string, pro
 
 ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -5984,7 +5984,7 @@ ValidatingWebhookConfiguration describes the configuration of and admission webh
 
 Deprecated in v1.16, planned for removal in v1.19. Use admissionregistration.k8s.io/v1 ValidatingWebhookConfiguration instead.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -6013,7 +6013,7 @@ VolumeAttachment captures the intent to attach or detach the specified volume to
 
 VolumeAttachment objects are non-namespaced.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -6040,7 +6040,7 @@ new k8s.KubeVolumeAttachment(scope: Construct, id: string, props: KubeVolumeAtta
 
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -6067,7 +6067,7 @@ new k8s.KubeVolumeAttachmentList(scope: Construct, id: string, props: KubeVolume
 
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -6094,7 +6094,7 @@ new k8s.KubeVolumeAttachmentListV1Alpha1(scope: Construct, id: string, props: Ku
 
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -6123,7 +6123,7 @@ VolumeAttachment captures the intent to attach or detach the specified volume to
 
 VolumeAttachment objects are non-namespaced.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
@@ -6152,7 +6152,7 @@ VolumeAttachment captures the intent to attach or detach the specified volume to
 
 VolumeAttachment objects are non-namespaced.
 
-__Implements__: [IConstruct](#constructs-iconstruct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
 __Submodule__: k8s
 
 __Extends__: [ApiObject](#cdk8s-apiobject)
