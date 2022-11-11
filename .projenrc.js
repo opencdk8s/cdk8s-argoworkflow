@@ -18,6 +18,11 @@ const project = new ConstructLibraryCdk8s({
   ],
   devDeps: [
   ],
+  publishToGo: {
+    gitUserName: 'Hunter-Thompson',
+    gitUserEmail: 'aatman@auroville.org.in',
+    moduleName: 'github.com/opencdk8s/cdk8s-argoworkflow-resources-go',
+  },
   releaseEveryCommit: true,
   dependabot: false,
   gitignore: ['test/'],
