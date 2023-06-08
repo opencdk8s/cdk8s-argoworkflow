@@ -489,6 +489,7 @@ export interface Parameter {
   readonly globalName?: string;
   readonly name: string;
   readonly value?: string;
+  readonly description?: string;
   readonly valueFrom?: ValueFrom;
 }
 
@@ -734,6 +735,7 @@ export interface ValueFrom {
   readonly jsonPath?: string;
   readonly parameter?: string;
   readonly path?: string;
+  readonly configMapKeyRef?: configMapKeyRef;
   readonly supplied?: SuppliedValueFrom;
 }
 
