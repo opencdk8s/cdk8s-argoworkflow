@@ -7250,6 +7250,7 @@ Name | Type | Description
 -----|------|-------------
 **name** | <code>string</code> | <span></span>
 **default**? | <code>string</code> | __*Optional*__
+**description**? | <code>string</code> | __*Optional*__
 **enum**? | <code>Array<string></code> | __*Optional*__
 **globalName**? | <code>string</code> | __*Optional*__
 **value**? | <code>string</code> | __*Optional*__
@@ -7720,6 +7721,7 @@ Name | Type | Description
 
 Name | Type | Description 
 -----|------|-------------
+**configMapKeyRef**? | <code>[k8s.ConfigMapKeySelector](#opencdk8s-cdk8s-argoworkflow-resources-k8s-configmapkeyselector)</code> | __*Optional*__
 **default**? | <code>string</code> | __*Optional*__
 **event**? | <code>string</code> | __*Optional*__
 **expression**? | <code>string</code> | __*Optional*__
