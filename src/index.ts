@@ -735,7 +735,7 @@ export interface ValueFrom {
   readonly jsonPath?: string;
   readonly parameter?: string;
   readonly path?: string;
-  readonly configMapKeyRef?: configMapKeyRef;
+  readonly configMapKeyRef?: k8s.ConfigMapKeySelector;
   readonly supplied?: SuppliedValueFrom;
 }
 
